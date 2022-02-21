@@ -10,8 +10,7 @@
             "request": "launch",
             "module": "voice_vid",
             "args": [
-                "--recording-log",
-                "/Users/pokey/Movies/Cursorless/Completed/Two Sum/raw-transcript.jsonl"
+                "data/raw/two-sum-explainer/index.toml"
             ]
         }
     ]

@@ -9,6 +9,7 @@
 from pathlib import Path
 
 import json
+from voice_vid.parse_config import parse_config
 
 from voice_vid.reconcile_transcript import reconcile_transcript
 from voice_vid.sbt import format_transcript
@@ -22,10 +23,13 @@ app = typer.Typer()
 
 @app.command()
 def main(
-    recording_log: Path = typer.Option(...),
-    timeline: Path = typer.Option(...),
+    index_path: Path,
 ):
     """Console script for voice_vid."""
+    config = parse_config(index_path)
+
+    recording_log = config.talon_log_dir_path / "talon-log.jsonl"
+
     raw_transcript = [
         json.loads(line) for line in recording_log.read_text().splitlines()
     ]

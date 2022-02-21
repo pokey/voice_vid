@@ -8,12 +8,13 @@
 # And then remove anything you don't want
 from pathlib import Path
 
-import json
 from voice_vid.parse_config import parse_config
+from voice_vid.parse_transcript import parse_talon_transcript
 
 from voice_vid.reconcile_transcript import reconcile_transcript
 from voice_vid.sbt import format_transcript
 import typer
+import opentimelineio as otio
 
 offset = 78 - 80.06904987200323
 
@@ -26,13 +27,17 @@ def main(index_path: Path):
     """Console script for voice_vid."""
     config = parse_config(index_path)
 
-    recording_log = config.talon_log_dir_path / "talon-log.jsonl"
+    talon_transcript = parse_talon_transcript(
+        config.talon_log_dir_path / "talon-log.jsonl"
+    )
 
-    raw_transcript = [
-        json.loads(line) for line in recording_log.read_text().splitlines()
-    ]
-
-    transcript = reconcile_transcript(raw_transcript, offset)
+    timeline = otio.adapters.read_from_file(config.timeline_path)
+    transcript = reconcile_transcript(
+        talon_transcript=talon_transcript,
+        offset_str=config.talon_offset,
+        timeline=timeline,
+        recording_path=config.screen_recording_path,
+    )
 
     typer.echo(format_transcript(transcript))
 

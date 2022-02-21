@@ -104,3 +104,7 @@ ENV/
 # IDE settings
 .idea/
 README.md
+tests/data/timeline.xml
+
+
+*.ipynb

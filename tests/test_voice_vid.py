@@ -10,7 +10,7 @@ def test_app():
     raw_transcript_path = str(get_data_file("raw-transcript.jsonl"))
     expected_output = get_data_file("expected-output.srt").read_text()
 
-    result = runner.invoke(app, [raw_transcript_path])
+    result = runner.invoke(app, ["--recording-log", raw_transcript_path])
 
     assert result.exit_code == 0
     assert result.stdout == expected_output

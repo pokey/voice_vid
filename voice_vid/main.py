@@ -22,9 +22,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main(
-    index_path: Path,
-):
+def main(index_path: Path):
     """Console script for voice_vid."""
     config = parse_config(index_path)
 

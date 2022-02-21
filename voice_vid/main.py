@@ -17,6 +17,10 @@ import typer
 offset = 78 - 80.06904987200323
 
 
+app = typer.Typer()
+
+
+@app.command()
 def main(recording_log: Path):
     """Console script for voice_vid."""
     raw_transcript = [
@@ -30,9 +34,5 @@ def main(recording_log: Path):
     return 0
 
 
-def run():
-    typer.run(main)
-
-
 if __name__ == "__main__":
-    run()
+    app()

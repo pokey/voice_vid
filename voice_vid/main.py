@@ -21,7 +21,10 @@ app = typer.Typer()
 
 
 @app.command()
-def main(recording_log: Path = typer.Option(...)):
+def main(
+    recording_log: Path = typer.Option(...),
+    timeline: Path = typer.Option(...),
+):
     """Console script for voice_vid."""
     raw_transcript = [
         json.loads(line) for line in recording_log.read_text().splitlines()

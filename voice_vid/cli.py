@@ -6,31 +6,33 @@
 #   > 'path/raw-transcript.jsonl'
 #
 # And then remove anything you don't want
-import sys
-import click
+from pathlib import Path
 
 import json
 
 from voice_vid.reconcile_transcript import reconcile_transcript
 from voice_vid.sbt import format_transcript
+import typer
 
 offset = 78 - 80.06904987200323
 
 
-@click.command()
-def main(args=None):
+def main(recording_log: Path):
     """Console script for voice_vid."""
-    with open(
-        "/Users/pokey/Movies/Cursorless/Completed/Two Sum/raw-transcript.jsonl"
-    ) as f:
-        raw_transcript = [json.loads(line) for line in f]
+    raw_transcript = [
+        json.loads(line) for line in recording_log.read_text().splitlines()
+    ]
 
     transcript = reconcile_transcript(raw_transcript, offset)
 
-    click.echo(format_transcript(transcript))
+    typer.echo(format_transcript(transcript))
 
     return 0
 
 
+def run():
+    typer.run(main)
+
+
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    run()

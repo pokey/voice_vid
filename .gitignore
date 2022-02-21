@@ -103,8 +103,6 @@ ENV/
 
 # IDE settings
 .idea/
-tests/data/timeline.xml
-
 
 *.ipynb
 /data/

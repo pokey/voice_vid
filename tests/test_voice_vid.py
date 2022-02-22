@@ -6,12 +6,10 @@ from voice_vid.main import app
 runner = CliRunner()
 
 
-def test_app():
-    data_dir = get_data_path("simple")
-    index_path = data_dir / "index.toml"
-    expected_output = (data_dir / "expected-output.srt").read_text()
+def test_app(snapshot):
+    index_path = get_data_path("simple") / "index.toml"
 
     result = runner.invoke(app, [str(index_path)])
 
     assert result.exit_code == 0
-    assert result.stdout == expected_output
+    assert result.stdout == snapshot

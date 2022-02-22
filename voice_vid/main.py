@@ -16,9 +16,6 @@ from voice_vid.sbt import format_transcript
 import typer
 import opentimelineio as otio
 
-offset = 78 - 80.06904987200323
-
-
 app = typer.Typer()
 
 
@@ -30,8 +27,8 @@ def main(index_path: Path):
     talon_transcript = parse_talon_transcript(
         config.talon_log_dir_path / "talon-log.jsonl"
     )
-
     timeline = otio.adapters.read_from_file(config.timeline_path)
+
     transcript = reconcile_transcript(
         talon_transcript=talon_transcript,
         offset_str=config.talon_offset,

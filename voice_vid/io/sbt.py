@@ -1,6 +1,6 @@
 from math import floor
 
-from voice_vid.reconcile_transcript import TranscriptItem
+from voice_vid.io.parse_transcript import TranscriptItem
 
 
 def format_time_stamp(total_seconds: float):

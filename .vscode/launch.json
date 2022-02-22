@@ -10,6 +10,7 @@
             "request": "launch",
             "module": "voice_vid",
             "args": [
+                "reconcile",
                 "data/raw/two-sum-explainer/index.toml"
             ]
         }

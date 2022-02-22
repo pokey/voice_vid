@@ -1,18 +1,27 @@
 from dataclasses import dataclass
 from pathlib import Path
+
 import opentimelineio as otio
 
-from voice_vid.parse_transcript import TranscriptItem
+from voice_vid.io.parse_transcript import Transcript, TranscriptItem
 
 
 @dataclass
 class SubtitleRange:
     range: otio.opentime.TimeRange
+    raw_phrase_start_time: otio.opentime.RationalTime
     text: str
+    id: str
 
 
-def reconcile_transcript(
-    talon_transcript: list[TranscriptItem],
+@dataclass(frozen=True, order=True)
+class ReconciledCommand:
+    shift_seconds: float
+    id: str
+
+
+def reconcile_commands(
+    talon_transcript: Transcript,
     offset_str: str,
     timeline: otio.schema.Timeline,
     recording_path: Path,
@@ -29,20 +38,7 @@ def reconcile_transcript(
     talon_log_start = otio.opentime.RationalTime.from_timecode(offset_str, framerate)
 
     subtitle_source_ranges = [
-        SubtitleRange(
-            range=otio.opentime.TimeRange(
-                start_time=(
-                    talon_log_start
-                    + otio.opentime.RationalTime.from_seconds(
-                        transcript_item.phrase_start, framerate
-                    )
-                ),
-                duration=otio.opentime.RationalTime.from_seconds(
-                    transcript_item.phrase_end - transcript_item.phrase_start, framerate
-                ),
-            ),
-            text=transcript_item.phrase,
-        )
+        get_subtitle_source_range(talon_log_start, framerate, transcript_item)
         for transcript_item in talon_transcript
     ]
 
@@ -51,8 +47,29 @@ def reconcile_transcript(
             subtitle
             for clip in clips
             for subtitle in find_subtitles_in_clip(subtitle_source_ranges, clip)
-        },
-        key=lambda subtitle: subtitle.phrase_start,
+        }
+    )
+
+
+def get_subtitle_source_range(
+    talon_log_start: otio.opentime.RationalTime,
+    framerate: int,
+    transcript_item: TranscriptItem,
+):
+    raw_phrase_start_time = otio.opentime.RationalTime.from_seconds(
+        transcript_item.phrase_start, framerate
+    )
+
+    return SubtitleRange(
+        range=otio.opentime.TimeRange(
+            start_time=talon_log_start + raw_phrase_start_time,
+            duration=otio.opentime.RationalTime.from_seconds(
+                transcript_item.phrase_end - transcript_item.phrase_start, framerate
+            ),
+        ),
+        raw_phrase_start_time=raw_phrase_start_time,
+        text=transcript_item.phrase,
+        id=transcript_item.id,
     )
 
 
@@ -64,13 +81,13 @@ def find_subtitles_in_clip(
     target_range = clip.trimmed_range_in_parent()
 
     return [
-        get_transcript_item(subtitle, source_range, target_range)
+        get_reconciled_command(subtitle, source_range, target_range)
         for subtitle in subtitle_source_ranges
         if source_range.intersects(subtitle.range)
     ]
 
 
-def get_transcript_item(
+def get_reconciled_command(
     subtitle: SubtitleRange,
     source_range: otio.opentime.TimeRange,
     target_range: otio.opentime.TimeRange,
@@ -81,10 +98,11 @@ def get_transcript_item(
             + (subtitle.range.start_time - source_range.start_time)
         ),
         duration=subtitle.range.duration,
-    ).clamped(target_range)
+    )
 
-    return TranscriptItem(
-        phrase_start=subtitle_target_range.start_time.to_seconds(),
-        phrase_end=subtitle_target_range.end_time_exclusive().to_seconds(),
-        phrase=subtitle.text,
+    return ReconciledCommand(
+        shift_seconds=(
+            subtitle_target_range.start_time - subtitle.raw_phrase_start_time
+        ).to_seconds(),
+        id=subtitle.id,
     )

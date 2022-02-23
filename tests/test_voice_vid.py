@@ -1,3 +1,4 @@
+import json
 from typer.testing import CliRunner
 from tests.data import get_data_path
 
@@ -79,4 +80,4 @@ def test_transcript(snapshot):
     )
 
     assert result.exit_code == 0
-    assert result.stdout == snapshot
+    assert json.loads(result.stdout) == snapshot

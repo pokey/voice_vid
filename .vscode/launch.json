@@ -5,14 +5,38 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "Reconcile",
             "type": "python",
             "request": "launch",
             "module": "voice_vid",
             "args": [
                 "reconcile",
+                "tests/data/simple/index.toml"
+            ]
+        },
+        {
+            "name": "Subtitles",
+            "type": "python",
+            "request": "launch",
+            "module": "voice_vid",
+            "args": [
+                "subtitles",
+                "--reconciled",
+                "tests/data/simple/reconciled.jsonl",
+                "tests/data/simple/index.toml"
+            ]
+        },
+        {
+            "name": "Transcript",
+            "type": "python",
+            "request": "launch",
+            "module": "voice_vid",
+            "args": [
+                "transcript",
+                "--reconciled",
+                "tests/data/simple/reconciled.jsonl",
                 "data/raw/two-sum-explainer/index.toml"
             ]
-        }
+        },
     ]
 }

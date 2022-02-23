@@ -1,4 +1,4 @@
-{"type": "initialInfo", "extensionRecordStartPayload": {"startTimestampISO": "2022-02-19T15:11:02.720Z"}, "startTimestampISO": "2022-02-19T15:11:02.699516"}
+{"type": "initialInfo", "extensionRecordStartPayload": {"startTimestampISO": "2022-02-19T15:11:02.720Z"}, "startTimestampISO": "2022-02-19T15:11:02.699516", "talonDir": "/Users/pokey/.talon"}
 {"type": "directoryInfo", "localPath": "/Users/pokey/.talon/user/talon_hud", "localRealPath": "/Users/pokey/src/talon_hud", "repoRemoteUrl": "git@github.com:pokey/talon_hud.git", "repoPrefix": "", "commitSha": "0f006355f22441fb30ea0695f06d4683f68fa3c7"}
 {"type": "directoryInfo", "localPath": "/Users/pokey/.talon/user/pokey_talon", "localRealPath": "/Users/pokey/src/pokey_talon", "repoRemoteUrl": "git@github.com:pokey/pokey_talon.git", "repoPrefix": "", "commitSha": "db25604627147533d3f92871e39bda558bb2f22a"}
 {"type": "directoryInfo", "localPath": "/Users/pokey/.talon/user/cursorless-talon", "localRealPath": "/Users/pokey/src/cursorless-talon", "repoRemoteUrl": "git@github.com:cursorless-dev/cursorless-talon.git", "repoPrefix": "", "commitSha": "eb5e57c49b8f854f13ca1671b67d80a91c832c2f"}

@@ -1,6 +1,6 @@
 from math import floor
 
-from voice_vid.io.parse_transcript import TranscriptItem
+from voice_vid.generate_subtitles import Subtitle
 
 
 def format_time_stamp(total_seconds: float):
@@ -10,7 +10,7 @@ def format_time_stamp(total_seconds: float):
     return f"{int(hours):02}:{int(minutes):02}:{floor(seconds):02},{milliseconds:03}"
 
 
-def format_transcript(transcript: list[TranscriptItem]):
+def format_transcript(transcript: list[Subtitle]):
     transcript_items = [
         format_transcript_item(index, item) for index, item in enumerate(transcript)
     ]
@@ -18,9 +18,9 @@ def format_transcript(transcript: list[TranscriptItem]):
     return "\n\n".join(transcript_items)
 
 
-def format_transcript_item(index: int, item: TranscriptItem):
+def format_transcript_item(index: int, item: Subtitle):
     return f"""
 {index + 1}
-{format_time_stamp(item.phrase_start)} --> {format_time_stamp(item.phrase_end)}
-{item.phrase}
+{format_time_stamp(item.start_seconds)} --> {format_time_stamp(item.end_seconds)}
+{item.text}
         """.strip()

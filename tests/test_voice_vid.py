@@ -26,3 +26,57 @@ def test_subtitles(snapshot):
 
     assert result.exit_code == 0
     assert result.stdout == snapshot
+
+
+def test_subtitles_command_end(snapshot):
+    data_dir = get_data_path("simple")
+    index_path = data_dir / "index.toml"
+    reconciled_path = data_dir / "reconciled.jsonl"
+
+    result = runner.invoke(
+        app,
+        [
+            "subtitles",
+            "--use-command-end",
+            "--reconciled",
+            str(reconciled_path),
+            str(index_path),
+        ],
+    )
+
+    assert result.exit_code == 0
+    assert result.stdout == snapshot
+
+
+def test_subtitles_end_offset(snapshot):
+    data_dir = get_data_path("simple")
+    index_path = data_dir / "index.toml"
+    reconciled_path = data_dir / "reconciled.jsonl"
+
+    result = runner.invoke(
+        app,
+        [
+            "subtitles",
+            "--end-offset",
+            "1.0",
+            "--reconciled",
+            str(reconciled_path),
+            str(index_path),
+        ],
+    )
+
+    assert result.exit_code == 0
+    assert result.stdout == snapshot
+
+
+def test_transcript(snapshot):
+    data_dir = get_data_path("simple")
+    index_path = data_dir / "index.toml"
+    reconciled_path = data_dir / "reconciled.jsonl"
+
+    result = runner.invoke(
+        app, ["transcript", "--reconciled", str(reconciled_path), str(index_path)]
+    )
+
+    assert result.exit_code == 0
+    assert result.stdout == snapshot

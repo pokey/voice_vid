@@ -60,16 +60,6 @@ def construct_rule_uri(
     return f"{repo_info.repo_base_url}/{path}#L{line_number}"
 
 
-{
-    "type": "directoryInfo",
-    "localPath": "/Users/pokey/.talon/user/cursorless-talon",
-    "localRealPath": "/Users/pokey/src/cursorless-talon",
-    "repoRemoteUrl": "git@github.com:cursorless-dev/cursorless-talon.git",
-    "repoPrefix": "",
-    "commitSha": "eb5e57c49b8f854f13ca1671b67d80a91c832c2f",
-}
-
-
 def construct_repo_base_url(raw_repo_info: dict[str, Any]):
     parsed: Any = giturlparse.parse(raw_repo_info["repoRemoteUrl"])
     commit_sha = raw_repo_info["commitSha"]

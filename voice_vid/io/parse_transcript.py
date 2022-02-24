@@ -10,6 +10,7 @@ class RepoInfo:
     type: str
     talon_path: Path
     repo_base_url: str
+    is_cursorless: bool
 
 
 @dataclass
@@ -17,6 +18,7 @@ class Command:
     phrase: str
     grammar: str
     rule_uri: str
+    is_cursorless_command: bool
 
 
 @dataclass(frozen=True)
@@ -44,11 +46,14 @@ class Transcript:
         return self.item_map[key]
 
 
-def construct_rule_uri(
+def construct_command(
+    talon_dir: Path,
     repo_infos: list[RepoInfo],
-    local_path: Path,
-    line_number: int,
+    raw_command: dict[str, Any],
 ):
+    local_path = talon_dir / raw_command["file"]
+    line_number = raw_command["user_rule"]["line"]
+
     repo_info = next(
         repo_info
         for repo_info in repo_infos
@@ -57,16 +62,32 @@ def construct_rule_uri(
 
     path = local_path.relative_to(repo_info.talon_path)
 
-    return f"{repo_info.repo_base_url}/{path}#L{line_number}"
+    rule_uri = f"{repo_info.repo_base_url}/{path}#L{line_number}"
+
+    return Command(
+        phrase=raw_command["phrase"],
+        grammar=raw_command["grammar"],
+        rule_uri=rule_uri,
+        is_cursorless_command=repo_info.is_cursorless,
+    )
 
 
-def construct_repo_base_url(raw_repo_info: dict[str, Any]):
+def construct_repo_info(raw_repo_info: dict[str, Any]):
     parsed: Any = giturlparse.parse(raw_repo_info["repoRemoteUrl"])
     commit_sha = raw_repo_info["commitSha"]
     repo_prefix = raw_repo_info["repoPrefix"]
     prefix = f"/{repo_prefix}" if repo_prefix else ""
 
-    return f"https://github.com/{parsed.owner}/{parsed.repo}/blob/{commit_sha}{prefix}"
+    base_url = (
+        f"https://github.com/{parsed.owner}/{parsed.repo}/blob/{commit_sha}{prefix}"
+    )
+
+    return RepoInfo(
+        type=raw_repo_info["type"],
+        talon_path=Path(raw_repo_info["localPath"]),
+        repo_base_url=base_url,
+        is_cursorless=(parsed.owner == "cursorless-dev"),
+    )
 
 
 def parse_talon_transcript(path: Path):
@@ -79,11 +100,7 @@ def parse_talon_transcript(path: Path):
     talon_dir = Path(initial_info["talonDir"])
 
     repo_infos = [
-        RepoInfo(
-            type=raw_repo_info["type"],
-            talon_path=Path(raw_repo_info["localPath"]),
-            repo_base_url=construct_repo_base_url(raw_repo_info),
-        )
+        construct_repo_info(raw_repo_info)
         for raw_repo_info in raw_transcript
         if raw_repo_info["type"] == "directoryInfo"
     ]
@@ -99,15 +116,7 @@ def parse_talon_transcript(path: Path):
                 ],
                 phrase=raw_transcript_item["phrase"],
                 commands=[
-                    Command(
-                        phrase=raw_command["phrase"],
-                        grammar=raw_command["grammar"],
-                        rule_uri=construct_rule_uri(
-                            repo_infos,
-                            talon_dir / raw_command["file"],
-                            raw_command["user_rule"]["line"],
-                        ),
-                    )
+                    construct_command(talon_dir, repo_infos, raw_command)
                     for raw_command in raw_transcript_item["commands"]
                 ],
             )

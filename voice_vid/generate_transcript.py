@@ -7,7 +7,8 @@ from voice_vid.reconcile_commands import ReconciledCommand
 @dataclass
 class OutputTranscriptItem:
     id: str
-    offset: timedelta
+    start_offset: timedelta
+    end_offset: timedelta
     phrase: str
     commands: list[Command]
 
@@ -23,16 +24,18 @@ def generate_transcript(
             )
             for reconciled_command in reconciled_commands
         ],
-        key=lambda item: item.offset,
+        key=lambda item: item.start_offset,
     )
 
 
 def get_output_transcript_item(shift_seconds: float, transcript_item: TranscriptItem):
-    seconds = round(max(transcript_item.phrase_start + shift_seconds, 0))
+    start_seconds = round(max(transcript_item.phrase_start + shift_seconds, 0))
+    end_seconds = round(max(transcript_item.phrase_end + shift_seconds, 0))
 
     return OutputTranscriptItem(
         id=transcript_item.id,
-        offset=timedelta(seconds=seconds),
+        start_offset=timedelta(seconds=start_seconds),
+        end_offset=timedelta(seconds=end_seconds),
         phrase=transcript_item.phrase,
         commands=transcript_item.commands,
     )

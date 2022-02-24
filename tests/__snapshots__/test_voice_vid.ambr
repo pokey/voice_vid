@@ -513,9 +513,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
           'isCursorlessCommand': True,
           'phrase': 'snip foreign',
-          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
+          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
         },
       ],
@@ -527,9 +528,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'word <user.word>',
           'isCursorlessCommand': False,
           'phrase': 'word index',
-          'rule': 'word <user.word>',
+          'rule': 'word <user.word>: user.insert_formatted(user.word, "NOOP")',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
         },
       ],
@@ -541,9 +543,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'numb <user.number_string>',
           'isCursorlessCommand': False,
           'phrase': 'numb one',
-          'rule': 'numb <user.number_string>',
+          'rule': 'numb <user.number_string>: "{number_string}"',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
         },
       ],
@@ -555,9 +558,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'spam',
           'isCursorlessCommand': False,
           'phrase': 'spam',
-          'rule': 'spam',
+          'rule': 'spam: ", "',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
         },
       ],
@@ -569,9 +573,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'word <user.word>',
           'isCursorlessCommand': False,
           'phrase': 'word numb',
-          'rule': 'word <user.word>',
+          'rule': 'word <user.word>: user.insert_formatted(user.word, "NOOP")',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
         },
       ],
@@ -583,9 +588,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'numb <user.number_string>',
           'isCursorlessCommand': False,
           'phrase': 'numb one',
-          'rule': 'numb <user.number_string>',
+          'rule': 'numb <user.number_string>: "{number_string}"',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
         },
       ],
@@ -597,9 +603,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
           'isCursorlessCommand': True,
           'phrase': 'chuck fourth car',
-          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
+          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
         },
       ],
@@ -611,9 +618,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'next',
           'isCursorlessCommand': False,
           'phrase': 'next',
-          'rule': 'next',
+          'rule': 'next: user.vscode("jumpToNextSnippetPlaceholder")',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
         },
       ],
@@ -625,9 +633,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'funk <user.code_functions>',
           'isCursorlessCommand': False,
           'phrase': 'funk enumerate',
-          'rule': 'funk <user.code_functions>',
+          'rule': 'funk <user.code_functions>:',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L37',
         },
       ],
@@ -639,9 +648,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring made',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -653,9 +663,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'next',
           'isCursorlessCommand': False,
           'phrase': 'next',
-          'rule': 'next',
+          'rule': 'next: user.vscode("jumpToNextSnippetPlaceholder")',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
         },
       ],
@@ -667,9 +678,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
           'isCursorlessCommand': True,
           'phrase': 'snip foreign',
-          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
+          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
         },
       ],
@@ -681,9 +693,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring plex past one',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -695,15 +708,17 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
           'isCursorlessCommand': True,
           'phrase': 'clear four',
-          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
+          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
         },
         <class 'dict'> {
+          'grammar': 'cancel cancel',
           'isCursorlessCommand': False,
           'phrase': 'cancel cancel',
-          'rule': 'cancel cancel',
+          'rule': 'cancel cancel$: skip()',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/cancel.talon#L2',
         },
       ],
@@ -715,9 +730,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
           'isCursorlessCommand': True,
           'phrase': 'clear last car drum and urge',
-          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
+          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
         },
       ],
@@ -729,9 +745,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'numb <user.number_string>',
           'isCursorlessCommand': False,
           'phrase': 'numb two',
-          'rule': 'numb <user.number_string>',
+          'rule': 'numb <user.number_string>: "{number_string}"',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
         },
       ],
@@ -743,9 +760,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
           'isCursorlessCommand': True,
           'phrase': 'pre stack',
-          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>',
+          'rule': '<user.cursorless_action_or_vscode_command> <user.cursorless_target>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
         },
       ],
@@ -757,9 +775,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring call air',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -771,9 +790,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'tug',
           'isCursorlessCommand': False,
           'phrase': 'tug',
-          'rule': 'tug',
+          'rule': 'tug:',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L7',
         },
       ],
@@ -785,9 +805,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'square',
           'isCursorlessCommand': False,
           'phrase': 'square',
-          'rule': 'square',
+          'rule': 'square:',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
         },
       ],
@@ -799,9 +820,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring plex',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -813,9 +835,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.operator> (plus | add)',
           'isCursorlessCommand': False,
           'phrase': 'make plus',
-          'rule': '<user.operator> (plus | add)',
+          'rule': '<user.operator> (plus | add): user.code_operator_addition()',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
         },
       ],
@@ -827,9 +850,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'numb <user.number_string>',
           'isCursorlessCommand': False,
           'phrase': 'numb one',
-          'rule': 'numb <user.number_string>',
+          'rule': 'numb <user.number_string>: "{number_string}"',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
         },
       ],
@@ -841,9 +865,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.symbol_key>',
           'isCursorlessCommand': False,
           'phrase': 'stack',
-          'rule': '<user.symbol_key>',
+          'rule': '<user.symbol_key>: key(symbol_key)',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L4',
         },
       ],
@@ -855,9 +880,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.special_key>',
           'isCursorlessCommand': False,
           'phrase': 'scrape',
-          'rule': '<user.special_key>',
+          'rule': '<user.special_key>: key(special_key)',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L6',
         },
       ],
@@ -869,9 +895,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'south',
           'isCursorlessCommand': False,
           'phrase': 'south',
-          'rule': 'south',
+          'rule': 'south:',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L37',
         },
       ],
@@ -883,9 +910,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
           'isCursorlessCommand': True,
           'phrase': 'snip if',
-          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>',
+          'rule': '{user.cursorless_insert_snippet_action} <user.cursorless_insertion_snippet>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
         },
       ],
@@ -897,9 +925,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring urge',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -911,9 +940,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.operator> (plus | add)',
           'isCursorlessCommand': False,
           'phrase': 'make plus',
-          'rule': '<user.operator> (plus | add)',
+          'rule': '<user.operator> (plus | add): user.code_operator_addition()',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
         },
       ],
@@ -925,9 +955,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring two',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -939,9 +970,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'is equal',
           'isCursorlessCommand': False,
           'phrase': 'is equal',
-          'rule': 'is equal',
+          'rule': 'is equal: user.code_operator_equal()',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L31',
         },
       ],
@@ -953,9 +985,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring gust',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -967,9 +1000,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'next',
           'isCursorlessCommand': False,
           'phrase': 'next',
-          'rule': 'next',
+          'rule': 'next: user.vscode("jumpToNextSnippetPlaceholder")',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
         },
       ],
@@ -981,9 +1015,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '<user.operator> ({user.code_keyword}+)',
           'isCursorlessCommand': False,
           'phrase': 'make return',
-          'rule': '<user.operator> ({user.code_keyword}+)',
+          'rule': '<user.operator> ({user.code_keyword}+): user.code_keyword(code_keyword_list)',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L33',
         },
       ],
@@ -995,9 +1030,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'square',
           'isCursorlessCommand': False,
           'phrase': 'square',
-          'rule': 'square',
+          'rule': 'square:',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
         },
       ],
@@ -1009,9 +1045,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring each',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],
@@ -1023,9 +1060,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': 'spam',
           'isCursorlessCommand': False,
           'phrase': 'spam',
-          'rule': 'spam',
+          'rule': 'spam: ", "',
           'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
         },
       ],
@@ -1037,9 +1075,10 @@
     <class 'dict'> {
       'commands': <class 'list'> [
         <class 'dict'> {
+          'grammar': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
           'isCursorlessCommand': True,
           'phrase': 'bring plex',
-          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>',
+          'rule': '{user.cursorless_move_bring_action} <user.cursorless_move_bring_targets>:',
           'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
         },
       ],

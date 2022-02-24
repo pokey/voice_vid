@@ -17,6 +17,7 @@ class RepoInfo:
 class Command:
     phrase: str
     grammar: str
+    rule: str
     rule_uri: str
     is_cursorless_command: bool
 
@@ -67,6 +68,7 @@ def construct_command(
     return Command(
         phrase=raw_command["phrase"],
         grammar=raw_command["grammar"],
+        rule=raw_command["user_rule"]["rule"],
         rule_uri=rule_uri,
         is_cursorless_command=repo_info.is_cursorless,
     )

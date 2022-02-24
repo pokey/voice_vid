@@ -15,7 +15,8 @@ def write(file: TextIO, transcript: list[OutputTranscriptItem]):
                 "commands": [
                     {
                         "phrase": command.phrase,
-                        "rule": command.grammar,
+                        "grammar": command.grammar,
+                        "rule": command.rule,
                         "ruleUri": command.rule_uri,
                         "isCursorlessCommand": command.is_cursorless_command,
                     }

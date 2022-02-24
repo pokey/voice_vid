@@ -86,7 +86,7 @@ def transcript(
     )
     reconciled_command_list = reconciled_commands.read(reconciled)
 
-    transcript = generate_transcript(talon_transcript, reconciled_command_list)
+    transcript = generate_transcript(config, talon_transcript, reconciled_command_list)
 
     output_transcript.write(out_resolved, transcript)
 

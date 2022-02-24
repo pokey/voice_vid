@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 from datetime import timedelta
+from typing import Optional
+from voice_vid.io.parse_config import Config
 from voice_vid.io.parse_transcript import Command, Transcript, TranscriptItem
 from voice_vid.reconcile_commands import ReconciledCommand
 
@@ -13,18 +15,31 @@ class OutputTranscriptItem:
     commands: list[Command]
 
 
+@dataclass
+class OutputTranscript:
+    youtube_slug: Optional[str]
+    title: str
+    transcript_items: list[OutputTranscriptItem]
+
+
 def generate_transcript(
-    talon_transcript: Transcript, reconciled_commands: list[ReconciledCommand]
+    config: Config,
+    talon_transcript: Transcript,
+    reconciled_commands: list[ReconciledCommand],
 ):
-    return sorted(
-        [
-            get_output_transcript_item(
-                reconciled_command.shift_seconds,
-                talon_transcript[reconciled_command.id],
-            )
-            for reconciled_command in reconciled_commands
-        ],
-        key=lambda item: item.start_offset,
+    return OutputTranscript(
+        title=config.title,
+        youtube_slug=config.youtube_slug,
+        transcript_items=sorted(
+            [
+                get_output_transcript_item(
+                    reconciled_command.shift_seconds,
+                    talon_transcript[reconciled_command.id],
+                )
+                for reconciled_command in reconciled_commands
+            ],
+            key=lambda item: item.start_offset,
+        ),
     )
 
 

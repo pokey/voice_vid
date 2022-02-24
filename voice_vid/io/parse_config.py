@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
 import toml
 
 
@@ -10,6 +11,8 @@ class Config:
     screen_recording_path: Path
     talon_offset: str
     vscode_offset: str
+    youtube_slug: Optional[str]
+    title: str
 
 
 def parse_config(path: Path):
@@ -29,4 +32,6 @@ def parse_config(path: Path):
         screen_recording_path=resolve_path(raw_config["screen_recording_path"]),
         talon_offset=raw_config["talon_offset"],
         vscode_offset=raw_config["vscode_offset"],
+        title=raw_config["title"],
+        youtube_slug=raw_config.get("youtube_slug", None),
     )

@@ -9,8 +9,8 @@ from voice_vid.reconcile_commands import ReconciledCommand
 @dataclass
 class OutputTranscriptItem:
     id: str
-    start_offset: timedelta
-    end_offset: timedelta
+    start_offset: float
+    end_offset: float
     phrase: str
     commands: list[Command]
 
@@ -44,13 +44,13 @@ def generate_transcript(
 
 
 def get_output_transcript_item(shift_seconds: float, transcript_item: TranscriptItem):
-    start_seconds = round(max(transcript_item.phrase_start + shift_seconds, 0))
-    end_seconds = round(max(transcript_item.phrase_end + shift_seconds, 0))
+    start_seconds = max(transcript_item.phrase_start + shift_seconds, 0)
+    end_seconds = max(transcript_item.phrase_end + shift_seconds, 0)
 
     return OutputTranscriptItem(
         id=transcript_item.id,
-        start_offset=timedelta(seconds=start_seconds),
-        end_offset=timedelta(seconds=end_seconds),
+        start_offset=start_seconds,
+        end_offset=end_seconds,
         phrase=transcript_item.phrase,
         commands=transcript_item.commands,
     )

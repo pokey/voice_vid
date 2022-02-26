@@ -12,8 +12,8 @@ def write(file: TextIO, transcript: OutputTranscript):
             "transcript": [
                 {
                     "id": transcript_item.id,
-                    "startTimecode": str(transcript_item.start_offset),
-                    "endTimecode": str(transcript_item.end_offset),
+                    "startOffset": transcript_item.start_offset,
+                    "endOffset": transcript_item.end_offset,
                     "phrase": transcript_item.phrase,
                     "commands": [
                         {

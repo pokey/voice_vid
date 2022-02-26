@@ -522,10 +522,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endTimecode': '0:00:01',
+        'endOffset': 1.1933924553324076,
         'id': 'ee5d65f5-527d-43f1-b51d-665604167d9d',
         'phrase': 'snip foreign',
-        'startTimecode': '0:00:00',
+        'startOffset': 0,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -537,10 +537,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
           },
         ],
-        'endTimecode': '0:00:03',
+        'endOffset': 3.4699573543349587,
         'id': '9c49ac37-0633-436a-aab2-dba60d7340e4',
         'phrase': 'word index',
-        'startTimecode': '0:00:02',
+        'startOffset': 2.0589715913248554,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -552,10 +552,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endTimecode': '0:00:05',
+        'endOffset': 4.895421251336423,
         'id': '467310aa-20fc-4d1c-a8fa-2787f0f7490b',
         'phrase': 'numb one',
-        'startTimecode': '0:00:04',
+        'startOffset': 3.978918318318513,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -567,10 +567,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
           },
         ],
-        'endTimecode': '0:00:06',
+        'endOffset': 6.282212096326596,
         'id': 'e8867838-7e18-4dd6-afbf-081feaee68d8',
         'phrase': 'spam',
-        'startTimecode': '0:00:05',
+        'startOffset': 5.179017689328369,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -582,10 +582,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
           },
         ],
-        'endTimecode': '0:00:08',
+        'endOffset': 8.21549356932713,
         'id': 'd2b9fb22-709c-40a7-a2cf-52e68c522776',
         'phrase': 'word numb',
-        'startTimecode': '0:00:07',
+        'startOffset': 6.947036377330853,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -597,10 +597,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endTimecode': '0:00:10',
+        'endOffset': 9.662823938330014,
         'id': '1f830aa7-537b-45ef-a87e-bc6e790906ee',
         'phrase': 'numb one',
-        'startTimecode': '0:00:09',
+        'startOffset': 8.747013899325005,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -612,10 +612,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endTimecode': '0:00:12',
+        'endOffset': 11.819054015331979,
         'id': 'af20959b-934c-4c0e-a129-9d02b7f46cba',
         'phrase': 'chuck fourth car',
-        'startTimecode': '0:00:10',
+        'startOffset': 10.277886427329697,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -627,10 +627,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endTimecode': '0:00:14',
+        'endOffset': 13.541606669330697,
         'id': 'c1a32cd5-401f-43a4-ba79-98d604f1330d',
         'phrase': 'next',
-        'startTimecode': '0:00:12',
+        'startOffset': 12.379151775328985,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -642,10 +642,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L37',
           },
         ],
-        'endTimecode': '0:00:17',
+        'endOffset': 16.78970759632842,
         'id': '30f3f2b1-90ab-4aa9-ad52-f2ff7eb2cad6',
         'phrase': 'funk enumerate',
-        'startTimecode': '0:00:15',
+        'startOffset': 15.347226530329984,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -657,10 +657,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:00:20',
+        'endOffset': 19.637919811330114,
         'id': '55a09e37-df0d-4cab-9506-0661f71dfcca',
         'phrase': 'bring made',
-        'startTimecode': '0:00:18',
+        'startOffset': 18.317976970329376,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -672,10 +672,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endTimecode': '0:00:22',
+        'endOffset': 21.933510753328058,
         'id': 'd64942cb-7228-4de5-89e3-1a26edccd1b4',
         'phrase': 'next',
-        'startTimecode': '0:00:21',
+        'startOffset': 20.95804533032254,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -687,10 +687,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endTimecode': '0:00:25',
+        'endOffset': 25.24365157133628,
         'id': '2999985d-b87c-4508-b874-138f8b3ca606',
         'phrase': 'snip foreign',
-        'startTimecode': '0:00:24',
+        'startOffset': 24.01946040932865,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -702,10 +702,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:00:28',
+        'endOffset': 28.49919490033256,
         'id': 'c6e37a50-faad-4a2e-aa51-d847e86ecdc5',
         'phrase': 'bring plex past one',
-        'startTimecode': '0:00:27',
+        'startOffset': 26.74752450431891,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -724,10 +724,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/cancel.talon#L2',
           },
         ],
-        'endTimecode': '0:00:35',
+        'endOffset': 34.71155882932556,
         'id': '04a5e64c-d06c-4c89-87d1-3ca78a9dea25',
         'phrase': 'clear four cancel cancel',
-        'startTimecode': '0:00:32',
+        'startOffset': 31.849111573321473,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -739,10 +739,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endTimecode': '0:00:38',
+        'endOffset': 38.24142870532717,
         'id': '622a995e-75bd-4134-9ae6-0b7770cee90f',
         'phrase': 'clear last car drum and urge',
-        'startTimecode': '0:00:36',
+        'startOffset': 35.86777564032139,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -754,10 +754,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endTimecode': '0:00:41',
+        'endOffset': 41.34819570133016,
         'id': 'af5564b8-d532-4aa6-b7d6-2cc18641c74c',
         'phrase': 'numb two',
-        'startTimecode': '0:00:40',
+        'startOffset': 40.18777566233087,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -769,10 +769,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endTimecode': '0:00:44',
+        'endOffset': 43.57984110733572,
         'id': '0dd2016b-4c9a-46f6-bafd-d44ea5f266bc',
         'phrase': 'pre stack',
-        'startTimecode': '0:00:42',
+        'startOffset': 42.259741275325844,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -784,10 +784,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:00:48',
+        'endOffset': 48.11948699732796,
         'id': '8401d21f-99b6-454e-b2d9-dc163e806e3c',
         'phrase': 'bring call air',
-        'startTimecode': '0:00:47',
+        'startOffset': 46.57985365431717,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -799,10 +799,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L7',
           },
         ],
-        'endTimecode': '0:00:50',
+        'endOffset': 50.321039626333125,
         'id': 'f21a2863-5e57-48d4-85a9-a542a957c512',
         'phrase': 'tug',
-        'startTimecode': '0:00:49',
+        'startOffset': 49.33990853232002,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -814,10 +814,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
           },
         ],
-        'endTimecode': '0:00:52',
+        'endOffset': 51.786190845336144,
         'id': '3b4e7d98-8c9f-409e-bf35-6844aa30fa61',
         'phrase': 'square',
-        'startTimecode': '0:00:51',
+        'startOffset': 50.65988620832116,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -829,10 +829,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:00:54',
+        'endOffset': 53.856955137324015,
         'id': '24ace872-df97-43e2-8a52-54f4253b902e',
         'phrase': 'bring plex',
-        'startTimecode': '0:00:53',
+        'startOffset': 52.90785800831703,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -844,10 +844,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
           },
         ],
-        'endTimecode': '0:00:56',
+        'endOffset': 56.23100568533312,
         'id': '4c9957d4-1bd7-4814-8ede-b1ced2591706',
         'phrase': 'make plus',
-        'startTimecode': '0:00:55',
+        'startOffset': 55.099950488324005,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -859,10 +859,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endTimecode': '0:00:58',
+        'endOffset': 58.20990153933429,
         'id': '152f281d-4036-49e5-9dc0-7ab59ded5d97',
         'phrase': 'numb one',
-        'startTimecode': '0:00:57',
+        'startOffset': 57.078617381326815,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -874,10 +874,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L4',
           },
         ],
-        'endTimecode': '0:01:00',
+        'endOffset': 59.9125470623277,
         'id': '4407f358-c472-4621-ab7f-b26b88a0357a',
         'phrase': 'stack',
-        'startTimecode': '0:00:59',
+        'startOffset': 58.99864580032784,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -889,10 +889,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L6',
           },
         ],
-        'endTimecode': '0:01:07',
+        'endOffset': 66.76942710933702,
         'id': 'fd92e6c1-b082-4f29-8110-683621368602',
         'phrase': 'scrape',
-        'startTimecode': '0:01:05',
+        'startOffset': 65.42010378232419,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -904,10 +904,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L37',
           },
         ],
-        'endTimecode': '0:01:08',
+        'endOffset': 68.21962144132897,
         'id': '27782822-8b85-4b2e-8de8-c0a40643df39',
         'phrase': 'south',
-        'startTimecode': '0:01:07',
+        'startOffset': 67.46013374532242,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -919,10 +919,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endTimecode': '0:01:18',
+        'endOffset': 78.28374863532565,
         'id': '1ecd7074-14fa-44e0-8e0e-5fd86b2000bc',
         'phrase': 'snip if',
-        'startTimecode': '0:01:17',
+        'startOffset': 77.0282913513239,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -934,10 +934,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:01:25',
+        'endOffset': 85.44730201532559,
         'id': 'ad7ab9e7-e4d1-41a3-875b-dbf035719ac6',
         'phrase': 'bring urge',
-        'startTimecode': '0:01:24',
+        'startOffset': 84.43904435032357,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -949,10 +949,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
           },
         ],
-        'endTimecode': '0:01:28',
+        'endOffset': 87.96648783666994,
         'id': '94158bf7-0d97-4687-9a24-74eb2cc70a4c',
         'phrase': 'make plus',
-        'startTimecode': '0:01:27',
+        'startOffset': 86.73192712866391,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -964,10 +964,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:01:30',
+        'endOffset': 90.05841971667057,
         'id': '0761a05a-0cb9-42c5-8c65-b2276b35e896',
         'phrase': 'bring two',
-        'startTimecode': '0:01:29',
+        'startOffset': 88.83341536065079,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -979,10 +979,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L31',
           },
         ],
-        'endTimecode': '0:01:32',
+        'endOffset': 92.4221267146592,
         'id': '96ce1831-4b94-4681-ae8b-54c516169be2',
         'phrase': 'is equal',
-        'startTimecode': '0:01:31',
+        'startOffset': 91.35340828966098,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -994,10 +994,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:01:36',
+        'endOffset': 96.05474012965958,
         'id': 'f9f1e13f-c44c-4e37-95ef-72ba1e9f187b',
         'phrase': 'bring gust',
-        'startTimecode': '0:01:35',
+        'startOffset': 94.86290582465396,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1009,10 +1009,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endTimecode': '0:01:39',
+        'endOffset': 98.74690978666574,
         'id': 'a9c9b726-3a92-4e6e-98bf-f2158a4619de',
         'phrase': 'next',
-        'startTimecode': '0:01:38',
+        'startOffset': 97.86285964166261,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1024,10 +1024,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L33',
           },
         ],
-        'endTimecode': '0:01:40',
+        'endOffset': 100.47246946066541,
         'id': 'dca1dff2-b589-41ef-bd72-d159ecadd682',
         'phrase': 'make return',
-        'startTimecode': '0:01:39',
+        'startOffset': 99.21224602465615,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1039,10 +1039,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
           },
         ],
-        'endTimecode': '0:01:42',
+        'endOffset': 102.0572168276655,
         'id': '900a31b4-24e7-45e5-9cc9-e688910aab04',
         'phrase': 'square',
-        'startTimecode': '0:01:41',
+        'startOffset': 100.80433844965107,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1054,10 +1054,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:01:45',
+        'endOffset': 104.66604826466452,
         'id': 'f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88',
         'phrase': 'bring each',
-        'startTimecode': '0:01:44',
+        'startOffset': 103.53239563466438,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1069,10 +1069,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
           },
         ],
-        'endTimecode': '0:01:47',
+        'endOffset': 106.64593825066792,
         'id': '9d0b3bd3-ea35-49a5-be1c-5d6b67c5615a',
         'phrase': 'spam',
-        'startTimecode': '0:01:46',
+        'startOffset': 105.51373602565825,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1084,10 +1084,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endTimecode': '0:01:49',
+        'endOffset': 108.8079381686645,
         'id': '118ce2e1-cff6-4ff8-aa9c-84bef5148867',
         'phrase': 'bring plex',
-        'startTimecode': '0:01:48',
+        'startOffset': 107.58310705465071,
       },
     ],
     'youtubeSlug': '0ZZb12Qp6-0',

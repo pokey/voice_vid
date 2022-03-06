@@ -13,6 +13,9 @@ import opentimelineio as otio
 import typer
 from voice_vid.generate_subtitles import generate_subtitles
 from voice_vid.generate_transcript import generate_transcript
+from voice_vid.generate_mark_highlights_timeline import (
+    generate_mark_highlights_timeline,
+)
 
 from voice_vid.io.parse_config import parse_config
 from voice_vid.io.parse_transcript import parse_talon_transcript
@@ -89,6 +92,27 @@ def transcript(
     transcript = generate_transcript(config, talon_transcript, reconciled_command_list)
 
     output_transcript.write(out_resolved, transcript)
+
+
+@app.command()
+def mark_highlights(
+    index_path: Path,
+    reconciled: typer.FileText = typer.Option(...),
+    out: typer.FileTextWrite = typer.Argument(...),
+):
+    """Generate subtitles for a video"""
+    config = parse_config(index_path)
+
+    talon_transcript = parse_talon_transcript(
+        config.talon_log_dir_path / "talon-log.jsonl"
+    )
+    reconciled_command_list = reconciled_commands.read(reconciled)
+
+    mark_highlights_timeline = generate_mark_highlights_timeline(
+        config, talon_transcript, reconciled_command_list
+    )
+
+    otio.adapters.write_to_file(mark_highlights_timeline, out, "fcp_xml")
 
 
 if __name__ == "__main__":

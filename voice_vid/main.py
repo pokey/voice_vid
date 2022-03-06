@@ -112,7 +112,8 @@ def mark_highlights(
         config, talon_transcript, reconciled_command_list
     )
 
-    otio.adapters.write_to_file(mark_highlights_timeline, out, "fcp_xml")
+    input_timeline = otio.adapters.read_from_file(config.timeline_path)
+    otio.adapters.write_to_file(input_timeline, out.name, "fcp_xml")
 
 
 if __name__ == "__main__":

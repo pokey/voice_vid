@@ -38,5 +38,28 @@
                 "data/raw/two-sum-explainer/index.toml"
             ]
         },
+        {
+            "name": "Current reconcile",
+            "type": "python",
+            "request": "launch",
+            "module": "voice_vid",
+            "args": [
+                "reconcile",
+                "data/raw/react-component-and-fava-beans/index.toml"
+            ]
+        },
+        {
+            "name": "Mark highlights",
+            "type": "python",
+            "request": "launch",
+            "module": "voice_vid",
+            "args": [
+                "mark-highlights",
+                "--reconciled",
+                "data/interim/react-component-and-fava-beans/reconciled.jsonl",
+                "data/raw/react-component-and-fava-beans/index.toml",
+                "data/processed/react-component-and-fava-beans/mark-highlights-timeline.xml"
+            ]
+        },
     ]
 }

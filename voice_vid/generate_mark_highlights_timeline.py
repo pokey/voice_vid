@@ -1,10 +1,13 @@
+import copy
 from dataclasses import dataclass
 from datetime import timedelta
 from typing import Optional
+
+import opentimelineio as otio
+
 from voice_vid.io.parse_config import Config
 from voice_vid.io.parse_transcript import Command, Transcript, TranscriptItem
 from voice_vid.reconcile_commands import ReconciledCommand
-import opentimelineio as otio
 
 
 @dataclass
@@ -25,18 +28,24 @@ class OutputTranscript:
 
 def generate_mark_highlights_timeline(
     config: Config,
+    input_timeline: otio.schema.Timeline,
     talon_transcript: Transcript,
     reconciled_commands: list[ReconciledCommand],
 ):
-    timeline = otio.schema.Timeline(
-        name="Timeline 1 (Resolve)",
+    recording_path_uri = config.screen_recording_path.as_uri()
+    clip = next(
+        clip
+        for clip in input_timeline.each_clip()
+        if clip.media_reference.target_url == recording_path_uri
     )
+
+    media_reference = clip.media_reference
+    framerate = int(media_reference.metadata["fcp_xml"]["rate"]["timebase"])
 
     track = otio.schema.Track(
         name="",
         metadata={"fcp_xml": {"enabled": "TRUE", "locked": "FALSE"}},
     )
-    timeline.tracks.append(track)
 
     items = [
         otio.schema.Gap(
@@ -48,9 +57,7 @@ def generate_mark_highlights_timeline(
         ),
         otio.schema.Clip(
             name="Screen Recording 2022-03-01 at 17.34.23.mov",
-            media_reference=otio.schema.ExternalReference(
-                target_url="file:///Users/pokey/Movies/Cursorless/Completed/React%20component%20and%20fava%20beans/Screen%20Recording%202022-03-01%20at%2017.34.23.mov"
-            ),
+            media_reference=media_reference,
             source_range=otio.opentime.TimeRange(
                 start_time=otio.opentime.RationalTime(value=7359, rate=60),
                 duration=otio.opentime.RationalTime(value=10, rate=60),
@@ -171,18 +178,10 @@ def generate_mark_highlights_timeline(
                 }
             },
         ),
-        otio.schema.Transition(
-            name="Cross Dissolve",
-            transition_type="SMPTE_Dissolve",
-            in_offset=otio.opentime.RationalTime(value=10, rate=60),
-            out_offset=otio.opentime.RationalTime(value=10, rate=60),
-            metadata={"fcp_xml": {"alignment": "center"}},
-        ),
+        create_transition(),
         otio.schema.Clip(
             name="Screen Recording 2022-03-01 at 17.34.23.mov",
-            media_reference=otio.schema.ExternalReference(
-                target_url="file:///Users/pokey/Movies/Cursorless/Completed/React%20component%20and%20fava%20beans/Screen%20Recording%202022-03-01%20at%2017.34.23.mov"
-            ),
+            media_reference=media_reference,
             source_range=otio.opentime.TimeRange(
                 start_time=otio.opentime.RationalTime(value=755411, rate=60),
                 duration=otio.opentime.RationalTime(value=220, rate=60),
@@ -374,18 +373,10 @@ def generate_mark_highlights_timeline(
                 }
             },
         ),
-        otio.schema.Transition(
-            name="Cross Dissolve",
-            transition_type="SMPTE_Dissolve",
-            in_offset=otio.opentime.RationalTime(value=10, rate=60),
-            out_offset=otio.opentime.RationalTime(value=10, rate=60),
-            metadata={"fcp_xml": {"alignment": "center"}},
-        ),
+        create_transition(),
         otio.schema.Clip(
             name="Screen Recording 2022-03-01 at 17.34.23.mov",
-            media_reference=otio.schema.ExternalReference(
-                target_url="file:///Users/pokey/Movies/Cursorless/Completed/React%20component%20and%20fava%20beans/Screen%20Recording%202022-03-01%20at%2017.34.23.mov"
-            ),
+            media_reference=media_reference,
             source_range=otio.opentime.TimeRange(
                 start_time=otio.opentime.RationalTime(value=753003, rate=60),
                 duration=otio.opentime.RationalTime(value=10, rate=60),
@@ -582,7 +573,34 @@ def generate_mark_highlights_timeline(
     for item in items:
         track.append(item)
 
+    timeline = copy.deepcopy(input_timeline)
+    timeline.tracks[:] = [track]
+
     return timeline
+
+
+def create_transition():
+    return otio.schema.Transition(
+        name="Cross Dissolve",
+        transition_type="SMPTE_Dissolve",
+        in_offset=otio.opentime.RationalTime(value=10, rate=60),
+        out_offset=otio.opentime.RationalTime(value=10, rate=60),
+        metadata={
+            "fcp_xml": {
+                "alignment": "center",
+                "effect": {
+                    "name": "Cross Dissolve",
+                    "effectid": "Cross Dissolve",
+                    "effecttype": "transition",
+                    "mediatype": "video",
+                    "effectcategory": "Dissolve",
+                    "startratio": 0,
+                    "endratio": 1,
+                    "reverse": False,
+                },
+            },
+        },
+    )
 
 
 def get_output_transcript_item(shift_seconds: float, transcript_item: TranscriptItem):

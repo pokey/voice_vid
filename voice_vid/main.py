@@ -23,6 +23,7 @@ from voice_vid.io.sbt import format_transcript
 from voice_vid.io import reconciled_commands
 from voice_vid.io import output_transcript
 from voice_vid.reconcile_commands import reconcile_commands
+from voice_vid.compute_command_ranges import compute_command_ranges
 
 app = typer.Typer()
 
@@ -48,15 +49,15 @@ def reconcile(
         recording_path=config.screen_recording_path,
     )
 
-    reconciled_commands.write(out_resolved, reconciled)
+    command_ranges = compute_command_ranges(timeline, reconciled)
+
+    reconciled_commands.write(out_resolved, command_ranges)
 
 
 @app.command()
 def subtitles(
     index_path: Path,
     reconciled: typer.FileText = typer.Option(...),
-    use_command_end: bool = False,
-    end_offset: float = 0.0,
 ):
     """Generate subtitles for a video"""
     config = parse_config(index_path)
@@ -64,11 +65,9 @@ def subtitles(
     talon_transcript = parse_talon_transcript(
         config.talon_log_dir_path / "talon-log.jsonl"
     )
-    reconciled_command_list = reconciled_commands.read(reconciled)
+    reconciled_command_list = reconciled_commands.read(reconciled, talon_transcript)
 
-    subtitles = generate_subtitles(
-        talon_transcript, reconciled_command_list, use_command_end, end_offset
-    )
+    subtitles = generate_subtitles(reconciled_command_list)
 
     typer.echo(format_transcript(subtitles))
 
@@ -87,9 +86,9 @@ def transcript(
     talon_transcript = parse_talon_transcript(
         config.talon_log_dir_path / "talon-log.jsonl"
     )
-    reconciled_command_list = reconciled_commands.read(reconciled)
+    reconciled_command_list = reconciled_commands.read(reconciled, talon_transcript)
 
-    transcript = generate_transcript(config, talon_transcript, reconciled_command_list)
+    transcript = generate_transcript(config, reconciled_command_list)
 
     output_transcript.write(out_resolved, transcript)
 
@@ -106,11 +105,11 @@ def mark_highlights(
     talon_transcript = parse_talon_transcript(
         config.talon_log_dir_path / "talon-log.jsonl"
     )
-    reconciled_command_list = reconciled_commands.read(reconciled)
+    reconciled_command_list = reconciled_commands.read(reconciled, talon_transcript)
 
     input_timeline = otio.adapters.read_from_file(config.timeline_path)
     mark_highlights_timeline = generate_mark_highlights_timeline(
-        config, input_timeline, talon_transcript, reconciled_command_list
+        config, input_timeline, reconciled_command_list
     )
 
     otio.adapters.write_to_file(mark_highlights_timeline, out.name, "fcp_xml")

@@ -1,13 +1,14 @@
 import copy
 from dataclasses import dataclass
-from datetime import timedelta
+from pathlib import Path
 from typing import Optional
 
 import opentimelineio as otio
+from voice_vid.calculate_mark_highlights_timing import calculate_mark_highlights_timing
+from voice_vid.compute_command_ranges import CommandTiming
 
 from voice_vid.io.parse_config import Config
-from voice_vid.io.parse_transcript import Command, Transcript, TranscriptItem
-from voice_vid.reconcile_commands import ReconciledCommand
+from voice_vid.io.parse_transcript import Command, TranscriptItem
 
 
 @dataclass
@@ -29,74 +30,115 @@ class OutputTranscript:
 def generate_mark_highlights_timeline(
     config: Config,
     input_timeline: otio.schema.Timeline,
-    talon_transcript: Transcript,
-    reconciled_commands: list[ReconciledCommand],
+    reconciled_commands: list[CommandTiming],
 ):
-    recording_path_uri = config.screen_recording_path.as_uri()
-    clip = next(
-        clip
-        for clip in input_timeline.each_clip()
-        if clip.media_reference.target_url == recording_path_uri
+    media_reference = extract_media_reference(
+        config.screen_recording_path, input_timeline
     )
-
-    media_reference = clip.media_reference
     framerate = int(media_reference.metadata["fcp_xml"]["rate"]["timebase"])
 
-    items = [
-        otio.schema.Gap(
-            name="",
-            source_range=otio.opentime.TimeRange(
-                start_time=otio.opentime.RationalTime(value=0, rate=60),
-                duration=otio.opentime.RationalTime(value=2243, rate=60),
+    highlight_timings = calculate_mark_highlights_timing(
+        config, reconciled_commands, framerate, input_timeline.duration().to_seconds()
+    )
+
+    transition_time = otio.opentime.RationalTime(value=10, rate=framerate)
+
+    current_time = otio.opentime.RationalTime(value=0, rate=framerate)
+    items = []
+    for highlight_timing in highlight_timings:
+        if highlight_timing.target_start_seconds > current_time:
+            items.append(
+                otio.schema.Gap(
+                    name=f"{highlight_timing.transcript_item.id}.leading-gap",
+                    source_range=otio.opentime.TimeRange.range_from_start_end_time(
+                        current_time, highlight_timing.target_start_seconds
+                    ),
+                )
+            )
+
+        items += [
+            otio.schema.Clip(
+                name=f"{highlight_timing.transcript_item.id}.leading-clip",
+                media_reference=media_reference,
+                source_range=otio.opentime.TimeRange(
+                    start_time=(
+                        highlight_timing.target_start_seconds - highlight_timing.shift
+                    ),
+                    duration=transition_time,
+                ),
             ),
-        ),
-        otio.schema.Clip(
-            name="Screen Recording 2022-03-01 at 17.34.23.mov",
-            media_reference=media_reference,
-            source_range=otio.opentime.TimeRange(
-                start_time=otio.opentime.RationalTime(value=7359, rate=60),
-                duration=otio.opentime.RationalTime(value=10, rate=60),
+            create_transition(framerate),
+            create_freeze_frame(
+                name=f"{highlight_timing.transcript_item.id}.highlights",
+                media_reference=media_reference,
+                source_time=highlight_timing.source_highlight_offset_seconds,
+                duration=(
+                    highlight_timing.target_end_seconds
+                    - highlight_timing.target_start_seconds
+                    - transition_time
+                    - transition_time
+                ),
             ),
-        ),
-        create_transition(),
-        create_freeze_frame(
-            media_reference,
-            time=otio.opentime.RationalTime(value=7532.36927142, rate=60),
-            duration=otio.opentime.RationalTime(value=220, rate=60),
-        ),
-        create_transition(),
-        create_freeze_frame(
-            media_reference,
-            time=otio.opentime.RationalTime(value=7508.35857366, rate=60),
-            duration=otio.opentime.RationalTime(value=10, rate=60),
-        ),
-    ]
+            create_transition(framerate),
+            create_freeze_frame(
+                name=f"{highlight_timing.transcript_item.id}.trailing-unhighlighted",
+                media_reference=media_reference,
+                source_time=highlight_timing.source_unhighlighted_offset_seconds,
+                duration=transition_time,
+            ),
+        ]
+
+        current_time = highlight_timing.target_end_seconds
 
     track = otio.schema.Track(
-        name="",
+        name="Mark highlights",
         metadata={"fcp_xml": {"enabled": "TRUE", "locked": "FALSE"}},
         children=items,
     )
 
     timeline = copy.deepcopy(input_timeline)
+    timeline.name = "Mark highlights timeline"
     timeline.tracks[:] = [track]
 
     return timeline
 
 
+def extract_media_reference(
+    screen_recording_path: Path, timeline: otio.schema.Timeline
+):
+    recording_path_uri = screen_recording_path.as_uri()
+
+    clip = next(
+        clip
+        for clip in timeline.each_clip()
+        if clip.media_reference.target_url == recording_path_uri
+    )
+
+    return clip.media_reference
+
+
 FREEZE_FRAME_SPEED = 0.997122 / 100
 FREEZE_FRAME_SPEED_STR = str(FREEZE_FRAME_SPEED * 100)
 
+# We'll set target start time of unhighlighted clip to be start of phrase minus
+# 1.02465608102 seconds
+
 
 def create_freeze_frame(
+    name: str,
     media_reference: otio.schema.ExternalReference,
-    time: otio.opentime.RationalTime,
+    source_time: otio.opentime.RationalTime,
     duration: otio.opentime.RationalTime,
 ):
-    start_time = otio.opentime.RationalTime(time.value / FREEZE_FRAME_SPEED, time.rate)
+    start_time = (
+        otio.opentime.RationalTime(
+            source_time.value / FREEZE_FRAME_SPEED, source_time.rate
+        )
+        - duration
+    )
 
     return otio.schema.Clip(
-        name="Screen Recording 2022-03-01 at 17.34.23.mov",
+        name=name,
         media_reference=media_reference,
         source_range=otio.opentime.TimeRange(
             start_time=start_time,
@@ -132,12 +174,12 @@ def create_freeze_frame(
     )
 
 
-def create_transition():
+def create_transition(framerate: int):
     return otio.schema.Transition(
         name="Cross Dissolve",
         transition_type="SMPTE_Dissolve",
-        in_offset=otio.opentime.RationalTime(value=10, rate=60),
-        out_offset=otio.opentime.RationalTime(value=10, rate=60),
+        in_offset=otio.opentime.RationalTime(value=10, rate=framerate),
+        out_offset=otio.opentime.RationalTime(value=10, rate=framerate),
         metadata={
             "fcp_xml": {
                 "alignment": "center",

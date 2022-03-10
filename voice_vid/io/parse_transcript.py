@@ -2,7 +2,7 @@ import giturlparse
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 
 @dataclass
@@ -27,7 +27,10 @@ class TranscriptItem:
     id: str
     phrase_start: float
     phrase_end: float
+    command_start: float
     command_end: float
+    mark_highlight_screenshot_offset_seconds: Optional[float]
+    pre_phrase_screenshot_offset_seconds: float
     phrase: str
     commands: list[Command]
 
@@ -109,22 +112,40 @@ def parse_talon_transcript(path: Path):
 
     return Transcript(
         items=[
-            TranscriptItem(
-                id=raw_transcript_item["id"],
-                phrase_start=raw_transcript_item["timeOffsets"]["speechStart"],
-                phrase_end=raw_transcript_item["timeOffsets"]["prePhraseCallbackStart"],
-                command_end=raw_transcript_item["timeOffsets"][
-                    "postPhraseCallbackStart"
-                ],
-                phrase=raw_transcript_item["phrase"],
-                commands=[
-                    construct_command(talon_dir, repo_infos, raw_command)
-                    for raw_command in raw_transcript_item["commands"]
-                ],
-            )
+            construct_transcript_item(talon_dir, repo_infos, raw_transcript_item)
             for raw_transcript_item in raw_transcript
             if raw_transcript_item["type"] == "talonCommandPhrase"
         ],
         repo_infos=repo_infos,
         talon_dir=talon_dir,
+    )
+
+
+def construct_transcript_item(
+    talon_dir: Path, repo_infos: list[RepoInfo], raw_transcript_item: dict
+):
+    raw_screenshots = raw_transcript_item["screenshots"]
+    decorated_mark_screenshots = raw_screenshots["decoratedMarks"]
+
+    mark_highlight_screenshot_offset_seconds = (
+        None
+        if decorated_mark_screenshots is None
+        else decorated_mark_screenshots["all"]["timeOffset"]
+    )
+
+    return TranscriptItem(
+        id=raw_transcript_item["id"],
+        phrase_start=raw_transcript_item["timeOffsets"]["speechStart"],
+        phrase_end=raw_transcript_item["timeOffsets"]["prePhraseCallbackStart"],
+        command_start=raw_transcript_item["timeOffsets"]["prePhraseCallbackEnd"],
+        mark_highlight_screenshot_offset_seconds=mark_highlight_screenshot_offset_seconds,
+        pre_phrase_screenshot_offset_seconds=raw_screenshots["preCommand"][
+            "timeOffset"
+        ],
+        command_end=raw_transcript_item["timeOffsets"]["postPhraseCallbackStart"],
+        phrase=raw_transcript_item["phrase"],
+        commands=[
+            construct_command(talon_dir, repo_infos, raw_command)
+            for raw_command in raw_transcript_item["commands"]
+        ],
     )

@@ -99,7 +99,7 @@ def mark_highlights(
     reconciled: typer.FileText = typer.Option(...),
     out: typer.FileTextWrite = typer.Argument(...),
 ):
-    """Generate subtitles for a video"""
+    """Generate a timeline containing a single track with highlights"""
     config = parse_config(index_path)
 
     talon_transcript = parse_talon_transcript(

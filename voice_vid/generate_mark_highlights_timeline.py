@@ -8,7 +8,7 @@ from voice_vid.calculate_mark_highlights_timing import calculate_mark_highlights
 from voice_vid.compute_command_ranges import CommandTiming
 
 from voice_vid.io.parse_config import Config
-from voice_vid.io.parse_transcript import Command, TranscriptItem
+from voice_vid.io.parse_transcript import Command
 
 
 @dataclass
@@ -67,7 +67,7 @@ def generate_mark_highlights_timeline(
                     duration=transition_time,
                 ),
             ),
-            create_transition(framerate),
+            create_transition(transition_time),
             create_freeze_frame(
                 name=f"{highlight_timing.transcript_item.id}.highlights",
                 media_reference=media_reference,
@@ -79,7 +79,7 @@ def generate_mark_highlights_timeline(
                     - transition_time
                 ),
             ),
-            create_transition(framerate),
+            create_transition(transition_time),
             create_freeze_frame(
                 name=f"{highlight_timing.transcript_item.id}.trailing-unhighlighted",
                 media_reference=media_reference,
@@ -177,12 +177,12 @@ def create_freeze_frame(
     )
 
 
-def create_transition(framerate: int):
+def create_transition(transition_time: otio.opentime.RationalTime):
     return otio.schema.Transition(
         name="Cross Dissolve",
         transition_type="SMPTE_Dissolve",
-        in_offset=otio.opentime.RationalTime(value=10, rate=framerate),
-        out_offset=otio.opentime.RationalTime(value=10, rate=framerate),
+        in_offset=transition_time,
+        out_offset=transition_time,
         metadata={
             "fcp_xml": {
                 "alignment": "center",
@@ -198,17 +198,4 @@ def create_transition(framerate: int):
                 },
             },
         },
-    )
-
-
-def get_output_transcript_item(shift_seconds: float, transcript_item: TranscriptItem):
-    start_seconds = max(transcript_item.phrase_start + shift_seconds, 0)
-    end_seconds = max(transcript_item.phrase_end + shift_seconds, 0)
-
-    return OutputTranscriptItem(
-        id=transcript_item.id,
-        start_offset=start_seconds,
-        end_offset=end_seconds,
-        phrase=transcript_item.phrase,
-        commands=transcript_item.commands,
     )

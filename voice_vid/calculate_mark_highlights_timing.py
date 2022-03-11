@@ -72,6 +72,8 @@ def get_highlight_timing(
         target_start_seconds=otio.opentime.RationalTime.from_seconds(
             reconciled_command.target_grace_start_seconds, framerate
         ),
+        # NB: We need the target to end exactly at command start so that it
+        # obscures the highlight flash but doesn't obscure command execution
         target_end_seconds=target_shift_and_clamp(transcript_item.command_start),
         source_highlight_offset_seconds=source_shift_and_clamp(
             source_highlight_offset_seconds

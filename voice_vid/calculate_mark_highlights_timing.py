@@ -7,7 +7,7 @@ from voice_vid.io.parse_config import Config
 from voice_vid.io.parse_transcript import TranscriptItem
 
 
-@dataclass(unsafe_hash=True)
+@dataclass
 class Highlight:
     transcript_item: TranscriptItem
     shift: otio.opentime.RationalTime

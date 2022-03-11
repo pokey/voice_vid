@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import opentimelineio as otio
+import typer
 
 from voice_vid.io.parse_transcript import Transcript, TranscriptItem
 from voice_vid.itertools import unique
@@ -37,11 +38,15 @@ def reconcile_commands(
     framerate = int(clips[0].media_reference.metadata["fcp_xml"]["rate"]["timebase"])
     talon_log_start = otio.opentime.RationalTime.from_timecode(offset_str, framerate)
 
-    subtitle_source_ranges = [
-        get_subtitle_source_range(talon_log_start, framerate, transcript_item)
-        for transcript_item in talon_transcript
-        if transcript_item.phrase_start >= 0
-    ]
+    subtitle_source_ranges = list(
+        filter(
+            None,
+            (
+                get_subtitle_source_range(talon_log_start, framerate, transcript_item)
+                for transcript_item in talon_transcript
+            ),
+        )
+    )
 
     return list(
         unique(
@@ -60,6 +65,14 @@ def get_subtitle_source_range(
     framerate: int,
     transcript_item: TranscriptItem,
 ):
+    if transcript_item.phrase_start < 0:
+        # For some reason, occasionally a phrase will have a negative start time.
+        # It's pretty rare so we just ignore it and warn
+        typer.echo(
+            f"WARNING: Invalid phrase start on command {transcript_item.id}", err=True
+        )
+        return None
+
     raw_phrase_start_time = otio.opentime.RationalTime.from_seconds(
         transcript_item.phrase_start, framerate
     )

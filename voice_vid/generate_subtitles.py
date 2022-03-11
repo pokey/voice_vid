@@ -5,7 +5,7 @@ from voice_vid.io.parse_transcript import Transcript, TranscriptItem
 from voice_vid.reconcile_commands import ReconciledCommand
 
 
-@dataclass(unsafe_hash=True)
+@dataclass
 class Subtitle:
     start_seconds: float
     end_seconds: float

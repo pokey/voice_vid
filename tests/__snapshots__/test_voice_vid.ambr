@@ -1,509 +1,1684 @@
+# name: test_mark_highlights
+  '
+  <?xml version="1.0" ?>
+  <xmeml version="4">
+      <project>
+          <name>Mark highlights timeline</name>
+          <children>
+              <sequence id="sequence-1">
+                  <in>-1</in>
+                  <media>
+                      <video>
+                          <format>
+                              <samplecharacteristics>
+                                  <codec>
+                                      <appspecificdata>
+                                          <appmanufacturer>Apple Inc.</appmanufacturer>
+                                          <appname>Final Cut Pro</appname>
+                                          <data>
+                                              <qtcodec/>
+                                          </data>
+                                      </appspecificdata>
+                                  </codec>
+                                  <height>2160</height>
+                                  <pixelaspectratio>square</pixelaspectratio>
+                                  <rate>
+                                      <ntsc>FALSE</ntsc>
+                                      <timebase>60</timebase>
+                                  </rate>
+                                  <width>3840</width>
+                              </samplecharacteristics>
+                          </format>
+                          <track>
+                              <enabled>TRUE</enabled>
+                              <locked>FALSE</locked>
+                              <clipitem frameBlend="FALSE" id="clipitem-1">
+                                  <file id="file-1">
+                                      <media>
+                                          <audio>
+                                              <channelcount>1</channelcount>
+                                          </audio>
+                                          <video>
+                                              <duration>8169</duration>
+                                              <samplecharacteristics>
+                                                  <height>2160</height>
+                                                  <width>3840</width>
+                                              </samplecharacteristics>
+                                          </video>
+                                      </media>
+                                      <pathurl>file:///Users/pokey/Movies/Cursorless/Completed/Two%20Sum%20explainer/Screen%20Recording%202022-02-19%20at%2015.10.59.mov</pathurl>
+                                      <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
+                                      <rate>
+                                          <timebase>60</timebase>
+                                          <ntsc>FALSE</ntsc>
+                                      </rate>
+                                      <duration>8169</duration>
+                                      <timecode>
+                                          <rate>
+                                              <timebase>60</timebase>
+                                              <ntsc>FALSE</ntsc>
+                                          </rate>
+                                          <string>00:00:00:00</string>
+                                          <frame>0</frame>
+                                          <displayformat>NDF</displayformat>
+                                      </timecode>
+                                  </file>
+                                  <name>55a09e37-df0d-4cab-9506-0661f71dfcca.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>1038</start>
+                                  <end>-1</end>
+                                  <in>1870</in>
+                                  <out>1890</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>1038</start>
+                                  <end>1058</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-2">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>55a09e37-df0d-4cab-9506-0661f71dfcca.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>138</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>615638</in>
+                                  <out>615796</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>1176</start>
+                                  <end>1196</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-3">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>55a09e37-df0d-4cab-9506-0661f71dfcca.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>1196</end>
+                                  <in>612694</in>
+                                  <out>612714</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-4">
+                                  <file id="file-1"/>
+                                  <name>c6e37a50-faad-4a2e-aa51-d847e86ecdc5.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>1543</start>
+                                  <end>-1</end>
+                                  <in>2375</in>
+                                  <out>2395</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>1543</start>
+                                  <end>1563</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-5">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>c6e37a50-faad-4a2e-aa51-d847e86ecdc5.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>164</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>775596</in>
+                                  <out>775780</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>1708</start>
+                                  <end>1728</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-6">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>c6e37a50-faad-4a2e-aa51-d847e86ecdc5.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>1728</end>
+                                  <in>772665</in>
+                                  <out>772685</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-7">
+                                  <file id="file-1"/>
+                                  <name>622a995e-75bd-4134-9ae6-0b7770cee90f.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>2091</start>
+                                  <end>-1</end>
+                                  <in>2923</in>
+                                  <out>2943</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2091</start>
+                                  <end>2111</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-8">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>622a995e-75bd-4134-9ae6-0b7770cee90f.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>203</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>951792</in>
+                                  <out>952016</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2294</start>
+                                  <end>2314</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-9">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>622a995e-75bd-4134-9ae6-0b7770cee90f.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>2314</end>
+                                  <in>948589</in>
+                                  <out>948609</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-10">
+                                  <file id="file-1"/>
+                                  <name>0dd2016b-4c9a-46f6-bafd-d44ea5f266bc.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>2483</start>
+                                  <end>-1</end>
+                                  <in>3315</in>
+                                  <out>3335</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2483</start>
+                                  <end>2503</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-11">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>0dd2016b-4c9a-46f6-bafd-d44ea5f266bc.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>130</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>1048013</in>
+                                  <out>1048162</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2613</start>
+                                  <end>2633</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-12">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>0dd2016b-4c9a-46f6-bafd-d44ea5f266bc.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>2633</end>
+                                  <in>1044875</in>
+                                  <out>1044895</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-13">
+                                  <file id="file-1"/>
+                                  <name>8401d21f-99b6-454e-b2d9-dc163e806e3c.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>2733</start>
+                                  <end>-1</end>
+                                  <in>3565</in>
+                                  <out>3585</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2733</start>
+                                  <end>2753</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-14">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>8401d21f-99b6-454e-b2d9-dc163e806e3c.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>152</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>1129915</in>
+                                  <out>1130087</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>2886</start>
+                                  <end>2906</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-15">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>8401d21f-99b6-454e-b2d9-dc163e806e3c.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>2906</end>
+                                  <in>1126870</in>
+                                  <out>1126890</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-16">
+                                  <file id="file-1"/>
+                                  <name>24ace872-df97-43e2-8a52-54f4253b902e.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>3113</start>
+                                  <end>-1</end>
+                                  <in>3945</in>
+                                  <out>3965</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>3113</start>
+                                  <end>3133</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-17">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>24ace872-df97-43e2-8a52-54f4253b902e.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>116</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>1233513</in>
+                                  <out>1233649</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>3229</start>
+                                  <end>3249</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-18">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>24ace872-df97-43e2-8a52-54f4253b902e.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>3249</end>
+                                  <in>1230406</in>
+                                  <out>1230426</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-19">
+                                  <file id="file-1"/>
+                                  <name>ad7ab9e7-e4d1-41a3-875b-dbf035719ac6.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>5005</start>
+                                  <end>-1</end>
+                                  <in>5837</in>
+                                  <out>5857</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5005</start>
+                                  <end>5025</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-20">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>ad7ab9e7-e4d1-41a3-875b-dbf035719ac6.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>120</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>1803966</in>
+                                  <out>1804106</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5125</start>
+                                  <end>5145</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-21">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>ad7ab9e7-e4d1-41a3-875b-dbf035719ac6.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>5145</end>
+                                  <in>1800655</in>
+                                  <out>1800675</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-22">
+                                  <file id="file-1"/>
+                                  <name>0761a05a-0cb9-42c5-8c65-b2276b35e896.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>5281</start>
+                                  <end>-1</end>
+                                  <in>6546</in>
+                                  <out>6566</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5281</start>
+                                  <end>5301</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-23">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>0761a05a-0cb9-42c5-8c65-b2276b35e896.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>120</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>2017331</in>
+                                  <out>2017471</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5401</start>
+                                  <end>5421</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-24">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>0761a05a-0cb9-42c5-8c65-b2276b35e896.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>5421</end>
+                                  <in>2014193</in>
+                                  <out>2014213</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-25">
+                                  <file id="file-1"/>
+                                  <name>f9f1e13f-c44c-4e37-95ef-72ba1e9f187b.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>5630</start>
+                                  <end>-1</end>
+                                  <in>6895</in>
+                                  <out>6915</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5630</start>
+                                  <end>5650</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-26">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>f9f1e13f-c44c-4e37-95ef-72ba1e9f187b.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>131</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>2125652</in>
+                                  <out>2125803</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>5762</start>
+                                  <end>5782</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-27">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>f9f1e13f-c44c-4e37-95ef-72ba1e9f187b.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>5782</end>
+                                  <in>2122441</in>
+                                  <out>2122461</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-28">
+                                  <file id="file-1"/>
+                                  <name>f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>6150</start>
+                                  <end>-1</end>
+                                  <in>7415</in>
+                                  <out>7435</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>6150</start>
+                                  <end>6170</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-29">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>127</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>2281010</in>
+                                  <out>2281157</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>6278</start>
+                                  <end>6298</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-30">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>6298</end>
+                                  <in>2277870</in>
+                                  <out>2277890</out>
+                              </clipitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-31">
+                                  <file id="file-1"/>
+                                  <name>118ce2e1-cff6-4ff8-aa9c-84bef5148867.leading-clip</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>6401</start>
+                                  <end>-1</end>
+                                  <in>7666</in>
+                                  <out>7686</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>6401</start>
+                                  <end>6421</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-32">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>118ce2e1-cff6-4ff8-aa9c-84bef5148867.highlights</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>125</duration>
+                                  <start>-1</start>
+                                  <end>-1</end>
+                                  <in>2355796</in>
+                                  <out>2355941</out>
+                              </clipitem>
+                              <transitionitem>
+                                  <alignment>center</alignment>
+                                  <effect>
+                                      <effectcategory>Dissolve</effectcategory>
+                                      <effectid>Cross Dissolve</effectid>
+                                      <effecttype>transition</effecttype>
+                                      <endratio>1</endratio>
+                                      <mediatype>video</mediatype>
+                                      <name>Cross Dissolve</name>
+                                      <reverse>False</reverse>
+                                      <startratio>0</startratio>
+                                  </effect>
+                                  <start>6526</start>
+                                  <end>6546</end>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                              </transitionitem>
+                              <clipitem frameBlend="FALSE" id="clipitem-33">
+                                  <filter>
+                                      <effect>
+                                          <effectcategory>motion</effectcategory>
+                                          <effectid>timeremap</effectid>
+                                          <effecttype>motion</effecttype>
+                                          <mediatype>video</mediatype>
+                                          <name>Time Remap</name>
+                                          <parameter>
+                                              <name>speed</name>
+                                              <parameterid>speed</parameterid>
+                                              <value>0.332374</value>
+                                              <valuemax>10000</valuemax>
+                                              <valuemin>-10000</valuemin>
+                                          </parameter>
+                                      </effect>
+                                      <enabled>TRUE</enabled>
+                                      <end>-1</end>
+                                      <start>-1</start>
+                                  </filter>
+                                  <file id="file-1"/>
+                                  <name>118ce2e1-cff6-4ff8-aa9c-84bef5148867.trailing-unhighlighted</name>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <rate>
+                                      <timebase>60</timebase>
+                                      <ntsc>FALSE</ntsc>
+                                  </rate>
+                                  <duration>10</duration>
+                                  <start>-1</start>
+                                  <end>6546</end>
+                                  <in>2352654</in>
+                                  <out>2352674</out>
+                              </clipitem>
+                          </track>
+                      </video>
+                      <audio/>
+                  </media>
+                  <out>-1</out>
+                  <name>Mark highlights timeline</name>
+                  <duration>6546</duration>
+                  <rate>
+                      <timebase>60</timebase>
+                      <ntsc>FALSE</ntsc>
+                  </rate>
+                  <timecode>
+                      <rate>
+                          <timebase>60</timebase>
+                          <ntsc>FALSE</ntsc>
+                      </rate>
+                      <string>01:00:00:00</string>
+                      <frame>216000</frame>
+                      <displayformat>NDF</displayformat>
+                  </timecode>
+              </sequence>
+          </children>
+      </project>
+  </xmeml>
+  
+  '
+---
 # name: test_reconcile
   '
-  {"shiftSeconds": -21.083333333333332, "id": "0761a05a-0cb9-42c5-8c65-b2276b35e896"}
-  {"shiftSeconds": -21.083333333333332, "id": "118ce2e1-cff6-4ff8-aa9c-84bef5148867"}
-  {"shiftSeconds": -21.083333333333332, "id": "900a31b4-24e7-45e5-9cc9-e688910aab04"}
-  {"shiftSeconds": -21.083333333333332, "id": "94158bf7-0d97-4687-9a24-74eb2cc70a4c"}
-  {"shiftSeconds": -21.083333333333332, "id": "96ce1831-4b94-4681-ae8b-54c516169be2"}
-  {"shiftSeconds": -21.083333333333332, "id": "9d0b3bd3-ea35-49a5-be1c-5d6b67c5615a"}
-  {"shiftSeconds": -21.083333333333332, "id": "a9c9b726-3a92-4e6e-98bf-f2158a4619de"}
-  {"shiftSeconds": -21.083333333333332, "id": "dca1dff2-b589-41ef-bd72-d159ecadd682"}
-  {"shiftSeconds": -21.083333333333332, "id": "f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88"}
-  {"shiftSeconds": -21.083333333333332, "id": "f9f1e13f-c44c-4e37-95ef-72ba1e9f187b"}
-  {"shiftSeconds": -13.866666666666667, "id": "04a5e64c-d06c-4c89-87d1-3ca78a9dea25"}
-  {"shiftSeconds": -13.866666666666667, "id": "0dd2016b-4c9a-46f6-bafd-d44ea5f266bc"}
-  {"shiftSeconds": -13.866666666666667, "id": "152f281d-4036-49e5-9dc0-7ab59ded5d97"}
-  {"shiftSeconds": -13.866666666666667, "id": "1ecd7074-14fa-44e0-8e0e-5fd86b2000bc"}
-  {"shiftSeconds": -13.866666666666667, "id": "1f830aa7-537b-45ef-a87e-bc6e790906ee"}
-  {"shiftSeconds": -13.866666666666667, "id": "24ace872-df97-43e2-8a52-54f4253b902e"}
-  {"shiftSeconds": -13.866666666666667, "id": "27782822-8b85-4b2e-8de8-c0a40643df39"}
-  {"shiftSeconds": -13.866666666666667, "id": "2999985d-b87c-4508-b874-138f8b3ca606"}
-  {"shiftSeconds": -13.866666666666667, "id": "30f3f2b1-90ab-4aa9-ad52-f2ff7eb2cad6"}
-  {"shiftSeconds": -13.866666666666667, "id": "3b4e7d98-8c9f-409e-bf35-6844aa30fa61"}
-  {"shiftSeconds": -13.866666666666667, "id": "4407f358-c472-4621-ab7f-b26b88a0357a"}
-  {"shiftSeconds": -13.866666666666667, "id": "467310aa-20fc-4d1c-a8fa-2787f0f7490b"}
-  {"shiftSeconds": -13.866666666666667, "id": "4c9957d4-1bd7-4814-8ede-b1ced2591706"}
-  {"shiftSeconds": -13.866666666666667, "id": "55a09e37-df0d-4cab-9506-0661f71dfcca"}
-  {"shiftSeconds": -13.866666666666667, "id": "622a995e-75bd-4134-9ae6-0b7770cee90f"}
-  {"shiftSeconds": -13.866666666666667, "id": "8401d21f-99b6-454e-b2d9-dc163e806e3c"}
-  {"shiftSeconds": -13.866666666666667, "id": "9c49ac37-0633-436a-aab2-dba60d7340e4"}
-  {"shiftSeconds": -13.866666666666667, "id": "ad7ab9e7-e4d1-41a3-875b-dbf035719ac6"}
-  {"shiftSeconds": -13.866666666666667, "id": "af20959b-934c-4c0e-a129-9d02b7f46cba"}
-  {"shiftSeconds": -13.866666666666667, "id": "af5564b8-d532-4aa6-b7d6-2cc18641c74c"}
-  {"shiftSeconds": -13.866666666666667, "id": "c1a32cd5-401f-43a4-ba79-98d604f1330d"}
-  {"shiftSeconds": -13.866666666666667, "id": "c6e37a50-faad-4a2e-aa51-d847e86ecdc5"}
-  {"shiftSeconds": -13.866666666666667, "id": "d2b9fb22-709c-40a7-a2cf-52e68c522776"}
-  {"shiftSeconds": -13.866666666666667, "id": "d64942cb-7228-4de5-89e3-1a26edccd1b4"}
-  {"shiftSeconds": -13.866666666666667, "id": "e8867838-7e18-4dd6-afbf-081feaee68d8"}
-  {"shiftSeconds": -13.866666666666667, "id": "ee5d65f5-527d-43f1-b51d-665604167d9d"}
-  {"shiftSeconds": -13.866666666666667, "id": "f21a2863-5e57-48d4-85a9-a542a957c512"}
-  {"shiftSeconds": -13.866666666666667, "id": "fd92e6c1-b082-4f29-8110-683621368602"}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "ee5d65f5-527d-43f1-b51d-665604167d9d", "targetGraceStartSeconds": 0, "targetStartSeconds": 0, "targetEndSeconds": 1.2279613583251674, "targetGraceEndSeconds": 1.2279613583251674}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "9c49ac37-0633-436a-aab2-dba60d7340e4", "targetGraceStartSeconds": 1.2279613583251674, "targetStartSeconds": 2.0589715913248554, "targetEndSeconds": 3.5054043583242063, "targetGraceEndSeconds": 3.5054043583242063}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "467310aa-20fc-4d1c-a8fa-2787f0f7490b", "targetGraceStartSeconds": 3.5054043583242063, "targetStartSeconds": 3.978918318318513, "targetEndSeconds": 4.935483753333877, "targetGraceEndSeconds": 4.935483753333877}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "e8867838-7e18-4dd6-afbf-081feaee68d8", "targetGraceStartSeconds": 4.935483753333877, "targetStartSeconds": 5.179017689328369, "targetEndSeconds": 6.335018944331871, "targetGraceEndSeconds": 6.335018944331871}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "d2b9fb22-709c-40a7-a2cf-52e68c522776", "targetGraceStartSeconds": 6.335018944331871, "targetStartSeconds": 6.947036377330853, "targetEndSeconds": 8.268162203328878, "targetGraceEndSeconds": 8.268162203328878}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "1f830aa7-537b-45ef-a87e-bc6e790906ee", "targetGraceStartSeconds": 8.268162203328878, "targetStartSeconds": 8.747013899325005, "targetEndSeconds": 9.696551436327475, "targetGraceEndSeconds": 9.696551436327475}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "af20959b-934c-4c0e-a129-9d02b7f46cba", "targetGraceStartSeconds": 9.696551436327475, "targetStartSeconds": 10.277886427329697, "targetEndSeconds": 11.857365870326369, "targetGraceEndSeconds": 11.857365870326369}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "c1a32cd5-401f-43a4-ba79-98d604f1330d", "targetGraceStartSeconds": 11.857365870326369, "targetStartSeconds": 12.379151775328985, "targetEndSeconds": 13.594610769332697, "targetGraceEndSeconds": 14.322570449309982}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "30f3f2b1-90ab-4aa9-ad52-f2ff7eb2cad6", "targetGraceStartSeconds": 14.322570449309982, "targetStartSeconds": 15.347226530329984, "targetEndSeconds": 16.835841127323995, "targetGraceEndSeconds": 17.293320889309374}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "55a09e37-df0d-4cab-9506-0661f71dfcca", "targetGraceStartSeconds": 17.293320889309374, "targetStartSeconds": 18.317976970329376, "targetEndSeconds": 19.927807539325052, "targetGraceEndSeconds": 19.933389249302543}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "d64942cb-7228-4de5-89e3-1a26edccd1b4", "targetGraceStartSeconds": 19.933389249302543, "targetStartSeconds": 20.95804533032254, "targetEndSeconds": 21.96761424932823, "targetGraceEndSeconds": 22.992270330348227}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "2999985d-b87c-4508-b874-138f8b3ca606", "targetGraceStartSeconds": 22.994804328308653, "targetStartSeconds": 24.01946040932865, "targetEndSeconds": 25.281259552330205, "targetGraceEndSeconds": 25.722868423298912}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "c6e37a50-faad-4a2e-aa51-d847e86ecdc5", "targetGraceStartSeconds": 25.722868423298912, "targetStartSeconds": 26.74752450431891, "targetEndSeconds": 28.797652713330656, "targetGraceEndSeconds": 29.822308794350654}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "04a5e64c-d06c-4c89-87d1-3ca78a9dea25", "targetGraceStartSeconds": 30.824455492301475, "targetStartSeconds": 31.849111573321473, "targetEndSeconds": 34.76741231633253, "targetGraceEndSeconds": 34.84311955930139}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "622a995e-75bd-4134-9ae6-0b7770cee90f", "targetGraceStartSeconds": 34.84311955930139, "targetStartSeconds": 35.86777564032139, "targetEndSeconds": 38.56199496732928, "targetGraceEndSeconds": 39.16311958131087}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "af5564b8-d532-4aa6-b7d6-2cc18641c74c", "targetGraceStartSeconds": 39.16311958131087, "targetStartSeconds": 40.18777566233087, "targetEndSeconds": 41.38430004133455, "targetGraceEndSeconds": 41.38430004133455}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "0dd2016b-4c9a-46f6-bafd-d44ea5f266bc", "targetGraceStartSeconds": 41.38430004133455, "targetStartSeconds": 42.259741275325844, "targetEndSeconds": 43.87902674032569, "targetGraceEndSeconds": 44.90368282134569}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "8401d21f-99b6-454e-b2d9-dc163e806e3c", "targetGraceStartSeconds": 45.55519757329717, "targetStartSeconds": 46.57985365431717, "targetEndSeconds": 48.42956269633044, "targetGraceEndSeconds": 48.42956269633044}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "f21a2863-5e57-48d4-85a9-a542a957c512", "targetGraceStartSeconds": 48.42956269633044, "targetStartSeconds": 49.33990853232002, "targetEndSeconds": 50.35746652232968, "targetGraceEndSeconds": 50.35746652232968}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "3b4e7d98-8c9f-409e-bf35-6844aa30fa61", "targetGraceStartSeconds": 50.35746652232968, "targetStartSeconds": 50.65988620832116, "targetEndSeconds": 51.83521597633274, "targetGraceEndSeconds": 51.88320192729703}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "24ace872-df97-43e2-8a52-54f4253b902e", "targetGraceStartSeconds": 51.88320192729703, "targetStartSeconds": 52.90785800831703, "targetEndSeconds": 54.15058288832564, "targetGraceEndSeconds": 54.15058288832564}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "4c9957d4-1bd7-4814-8ede-b1ced2591706", "targetGraceStartSeconds": 54.15058288832564, "targetStartSeconds": 55.099950488324005, "targetEndSeconds": 56.26761117532636, "targetGraceEndSeconds": 56.26761117532636}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "152f281d-4036-49e5-9dc0-7ab59ded5d97", "targetGraceStartSeconds": 56.26761117532636, "targetStartSeconds": 57.078617381326815, "targetEndSeconds": 58.24885952033413, "targetGraceEndSeconds": 58.24885952033413}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "4407f358-c472-4621-ab7f-b26b88a0357a", "targetGraceStartSeconds": 58.24885952033413, "targetStartSeconds": 58.99864580032784, "targetEndSeconds": 59.95847172732659, "targetGraceEndSeconds": 60.98312780834659}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "fd92e6c1-b082-4f29-8110-683621368602", "targetGraceStartSeconds": 64.39544770130419, "targetStartSeconds": 65.42010378232419, "targetEndSeconds": 66.80353181633302, "targetGraceEndSeconds": 66.80353181633302}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "27782822-8b85-4b2e-8de8-c0a40643df39", "targetGraceStartSeconds": 66.80353181633302, "targetStartSeconds": 67.46013374532242, "targetEndSeconds": 68.2547556623341, "targetGraceEndSeconds": 69.2794117433541}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "1ecd7074-14fa-44e0-8e0e-5fd86b2000bc", "targetGraceStartSeconds": 76.0036352703039, "targetStartSeconds": 77.0282913513239, "targetEndSeconds": 78.3342115703291, "targetGraceEndSeconds": 79.3588676513491}
+  {"shiftSeconds": -13.866666666666667, "transcriptItem": "ad7ab9e7-e4d1-41a3-875b-dbf035719ac6", "targetGraceStartSeconds": 83.41438826930357, "targetStartSeconds": 84.43904435032357, "targetEndSeconds": 85.75477179432539, "targetGraceEndSeconds": 85.75477179432539}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "94158bf7-0d97-4687-9a24-74eb2cc70a4c", "targetGraceStartSeconds": 85.75477179432539, "targetStartSeconds": 86.73192712866391, "targetEndSeconds": 88.0245169656652, "targetGraceEndSeconds": 88.0245169656652}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "0761a05a-0cb9-42c5-8c65-b2276b35e896", "targetGraceStartSeconds": 88.0245169656652, "targetStartSeconds": 88.83341536065079, "targetEndSeconds": 90.35825230966536, "targetGraceEndSeconds": 90.35825230966536}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "96ce1831-4b94-4681-ae8b-54c516169be2", "targetGraceStartSeconds": 90.35825230966536, "targetStartSeconds": 91.35340828966098, "targetEndSeconds": 92.46602252865948, "targetGraceEndSeconds": 93.49067860967948}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "f9f1e13f-c44c-4e37-95ef-72ba1e9f187b", "targetGraceStartSeconds": 93.83824974363397, "targetStartSeconds": 94.86290582465396, "targetEndSeconds": 96.35946793166902, "targetGraceEndSeconds": 96.83820356064261}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "a9c9b726-3a92-4e6e-98bf-f2158a4619de", "targetGraceStartSeconds": 96.83820356064261, "targetStartSeconds": 97.86285964166261, "targetEndSeconds": 98.78815265766268, "targetGraceEndSeconds": 98.78815265766268}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "dca1dff2-b589-41ef-bd72-d159ecadd682", "targetGraceStartSeconds": 98.78815265766268, "targetStartSeconds": 99.21224602465615, "targetEndSeconds": 100.52531730367143, "targetGraceEndSeconds": 100.52531730367143}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "900a31b4-24e7-45e5-9cc9-e688910aab04", "targetGraceStartSeconds": 100.52531730367143, "targetStartSeconds": 100.80433844965107, "targetEndSeconds": 102.10874993366694, "targetGraceEndSeconds": 102.50773955364438}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88", "targetGraceStartSeconds": 102.50773955364438, "targetStartSeconds": 103.53239563466438, "targetEndSeconds": 104.96200615167133, "targetGraceEndSeconds": 104.96200615167133}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "9d0b3bd3-ea35-49a5-be1c-5d6b67c5615a", "targetGraceStartSeconds": 104.96200615167133, "targetStartSeconds": 105.51373602565825, "targetEndSeconds": 106.6872562726591, "targetGraceEndSeconds": 106.6872562726591}
+  {"shiftSeconds": -21.083333333333332, "transcriptItem": "118ce2e1-cff6-4ff8-aa9c-84bef5148867", "targetGraceStartSeconds": 106.6872562726591, "targetStartSeconds": 107.58310705465071, "targetEndSeconds": 109.10771828866079, "targetGraceEndSeconds": 110.06666666666666}
   '
 ---
 # name: test_subtitles
   '
   1
-  00:00:00,000 --> 00:00:01,193
+  00:00:00,000 --> 00:00:01,227
   snip foreign
   
   2
-  00:00:02,058 --> 00:00:03,469
+  00:00:01,227 --> 00:00:03,505
   word index
   
   3
-  00:00:03,978 --> 00:00:04,895
+  00:00:03,505 --> 00:00:04,935
   numb one
   
   4
-  00:00:05,179 --> 00:00:06,282
+  00:00:04,935 --> 00:00:06,335
   spam
   
   5
-  00:00:06,947 --> 00:00:08,215
+  00:00:06,335 --> 00:00:08,268
   word numb
   
   6
-  00:00:08,747 --> 00:00:09,662
+  00:00:08,268 --> 00:00:09,696
   numb one
   
   7
-  00:00:10,277 --> 00:00:11,819
+  00:00:09,696 --> 00:00:11,857
   chuck fourth car
   
   8
-  00:00:12,379 --> 00:00:13,541
+  00:00:11,857 --> 00:00:14,322
   next
   
   9
-  00:00:15,347 --> 00:00:16,789
+  00:00:14,322 --> 00:00:17,293
   funk enumerate
   
   10
-  00:00:18,317 --> 00:00:19,637
+  00:00:17,293 --> 00:00:19,933
   bring made
   
   11
-  00:00:20,958 --> 00:00:21,933
+  00:00:19,933 --> 00:00:22,992
   next
   
   12
-  00:00:24,019 --> 00:00:25,243
+  00:00:22,994 --> 00:00:25,722
   snip foreign
   
   13
-  00:00:26,747 --> 00:00:28,499
+  00:00:25,722 --> 00:00:29,822
   bring plex past one
   
   14
-  00:00:31,849 --> 00:00:34,711
+  00:00:30,824 --> 00:00:34,843
   clear four cancel cancel
   
   15
-  00:00:35,867 --> 00:00:38,241
+  00:00:34,843 --> 00:00:39,163
   clear last car drum and urge
   
   16
-  00:00:40,187 --> 00:00:41,348
+  00:00:39,163 --> 00:00:41,384
   numb two
   
   17
-  00:00:42,259 --> 00:00:43,579
+  00:00:41,384 --> 00:00:44,903
   pre stack
   
   18
-  00:00:46,579 --> 00:00:48,119
+  00:00:45,555 --> 00:00:48,429
   bring call air
   
   19
-  00:00:49,339 --> 00:00:50,321
+  00:00:48,429 --> 00:00:50,357
   tug
   
   20
-  00:00:50,659 --> 00:00:51,786
+  00:00:50,357 --> 00:00:51,883
   square
   
   21
-  00:00:52,907 --> 00:00:53,856
+  00:00:51,883 --> 00:00:54,150
   bring plex
   
   22
-  00:00:55,099 --> 00:00:56,231
+  00:00:54,150 --> 00:00:56,267
   make plus
   
   23
-  00:00:57,078 --> 00:00:58,209
+  00:00:56,267 --> 00:00:58,248
   numb one
   
   24
-  00:00:58,998 --> 00:00:59,912
+  00:00:58,248 --> 00:01:00,983
   stack
   
   25
-  00:01:05,420 --> 00:01:06,769
+  00:01:04,395 --> 00:01:06,803
   scrape
   
   26
-  00:01:07,460 --> 00:01:08,219
+  00:01:06,803 --> 00:01:09,279
   south
   
   27
-  00:01:17,028 --> 00:01:18,283
+  00:01:16,003 --> 00:01:19,358
   snip if
   
   28
-  00:01:24,439 --> 00:01:25,447
+  00:01:23,414 --> 00:01:25,754
   bring urge
   
   29
-  00:01:26,731 --> 00:01:27,966
+  00:01:25,754 --> 00:01:28,024
   make plus
   
   30
-  00:01:28,833 --> 00:01:30,058
+  00:01:28,024 --> 00:01:30,358
   bring two
   
   31
-  00:01:31,353 --> 00:01:32,422
+  00:01:30,358 --> 00:01:33,490
   is equal
   
   32
-  00:01:34,862 --> 00:01:36,054
+  00:01:33,838 --> 00:01:36,838
   bring gust
   
   33
-  00:01:37,862 --> 00:01:38,746
+  00:01:36,838 --> 00:01:38,788
   next
   
   34
-  00:01:39,212 --> 00:01:40,472
+  00:01:38,788 --> 00:01:40,525
   make return
   
   35
-  00:01:40,804 --> 00:01:42,057
+  00:01:40,525 --> 00:01:42,507
   square
   
   36
-  00:01:43,532 --> 00:01:44,666
+  00:01:42,507 --> 00:01:44,962
   bring each
   
   37
-  00:01:45,513 --> 00:01:46,645
+  00:01:44,962 --> 00:01:46,687
   spam
   
   38
-  00:01:47,583 --> 00:01:48,807
-  bring plex
-  
-  '
----
-# name: test_subtitles_command_end
-  '
-  1
-  00:00:00,000 --> 00:00:01,801
-  snip foreign
-  
-  2
-  00:00:02,058 --> 00:00:03,566
-  word index
-  
-  3
-  00:00:03,978 --> 00:00:04,952
-  numb one
-  
-  4
-  00:00:05,179 --> 00:00:06,359
-  spam
-  
-  5
-  00:00:06,947 --> 00:00:08,320
-  word numb
-  
-  6
-  00:00:08,747 --> 00:00:09,714
-  numb one
-  
-  7
-  00:00:10,277 --> 00:00:12,167
-  chuck fourth car
-  
-  8
-  00:00:12,379 --> 00:00:13,645
-  next
-  
-  9
-  00:00:15,347 --> 00:00:17,020
-  funk enumerate
-  
-  10
-  00:00:18,317 --> 00:00:20,498
-  bring made
-  
-  11
-  00:00:20,958 --> 00:00:22,021
-  next
-  
-  12
-  00:00:24,019 --> 00:00:25,850
-  snip foreign
-  
-  13
-  00:00:26,747 --> 00:00:29,367
-  bring plex past one
-  
-  14
-  00:00:31,849 --> 00:00:34,776
-  clear four cancel cancel
-  
-  15
-  00:00:35,867 --> 00:00:38,873
-  clear last car drum and urge
-  
-  16
-  00:00:40,187 --> 00:00:41,402
-  numb two
-  
-  17
-  00:00:42,259 --> 00:00:43,942
-  pre stack
-  
-  18
-  00:00:46,579 --> 00:00:48,996
-  bring call air
-  
-  19
-  00:00:49,339 --> 00:00:50,375
-  tug
-  
-  20
-  00:00:50,659 --> 00:00:51,871
-  square
-  
-  21
-  00:00:52,907 --> 00:00:54,717
-  bring plex
-  
-  22
-  00:00:55,099 --> 00:00:56,304
-  make plus
-  
-  23
-  00:00:57,078 --> 00:00:58,268
-  numb one
-  
-  24
-  00:00:58,998 --> 00:00:59,974
-  stack
-  
-  25
-  00:01:05,420 --> 00:01:06,820
-  scrape
-  
-  26
-  00:01:07,460 --> 00:01:08,280
-  south
-  
-  27
-  00:01:17,028 --> 00:01:18,902
-  snip if
-  
-  28
-  00:01:24,439 --> 00:01:26,321
-  bring urge
-  
-  29
-  00:01:26,731 --> 00:01:28,066
-  make plus
-  
-  30
-  00:01:28,833 --> 00:01:30,920
-  bring two
-  
-  31
-  00:01:31,353 --> 00:01:32,518
-  is equal
-  
-  32
-  00:01:34,862 --> 00:01:36,925
-  bring gust
-  
-  33
-  00:01:37,862 --> 00:01:38,833
-  next
-  
-  34
-  00:01:39,212 --> 00:01:40,604
-  make return
-  
-  35
-  00:01:40,804 --> 00:01:42,147
-  square
-  
-  36
-  00:01:43,532 --> 00:01:45,513
-  bring each
-  
-  37
-  00:01:45,513 --> 00:01:46,717
-  spam
-  
-  38
-  00:01:47,583 --> 00:01:49,674
-  bring plex
-  
-  '
----
-# name: test_subtitles_end_offset
-  '
-  1
-  00:00:00,000 --> 00:00:02,058
-  snip foreign
-  
-  2
-  00:00:02,058 --> 00:00:03,978
-  word index
-  
-  3
-  00:00:03,978 --> 00:00:05,179
-  numb one
-  
-  4
-  00:00:05,179 --> 00:00:06,947
-  spam
-  
-  5
-  00:00:06,947 --> 00:00:08,747
-  word numb
-  
-  6
-  00:00:08,747 --> 00:00:10,277
-  numb one
-  
-  7
-  00:00:10,277 --> 00:00:12,379
-  chuck fourth car
-  
-  8
-  00:00:12,379 --> 00:00:14,541
-  next
-  
-  9
-  00:00:15,347 --> 00:00:17,789
-  funk enumerate
-  
-  10
-  00:00:18,317 --> 00:00:20,637
-  bring made
-  
-  11
-  00:00:20,958 --> 00:00:22,933
-  next
-  
-  12
-  00:00:24,019 --> 00:00:26,243
-  snip foreign
-  
-  13
-  00:00:26,747 --> 00:00:29,499
-  bring plex past one
-  
-  14
-  00:00:31,849 --> 00:00:35,711
-  clear four cancel cancel
-  
-  15
-  00:00:35,867 --> 00:00:39,241
-  clear last car drum and urge
-  
-  16
-  00:00:40,187 --> 00:00:42,259
-  numb two
-  
-  17
-  00:00:42,259 --> 00:00:44,579
-  pre stack
-  
-  18
-  00:00:46,579 --> 00:00:49,119
-  bring call air
-  
-  19
-  00:00:49,339 --> 00:00:50,659
-  tug
-  
-  20
-  00:00:50,659 --> 00:00:52,786
-  square
-  
-  21
-  00:00:52,907 --> 00:00:54,856
-  bring plex
-  
-  22
-  00:00:55,099 --> 00:00:57,078
-  make plus
-  
-  23
-  00:00:57,078 --> 00:00:58,998
-  numb one
-  
-  24
-  00:00:58,998 --> 00:01:00,912
-  stack
-  
-  25
-  00:01:05,420 --> 00:01:07,460
-  scrape
-  
-  26
-  00:01:07,460 --> 00:01:09,219
-  south
-  
-  27
-  00:01:17,028 --> 00:01:19,283
-  snip if
-  
-  28
-  00:01:24,439 --> 00:01:26,447
-  bring urge
-  
-  29
-  00:01:26,731 --> 00:01:28,833
-  make plus
-  
-  30
-  00:01:28,833 --> 00:01:31,058
-  bring two
-  
-  31
-  00:01:31,353 --> 00:01:33,422
-  is equal
-  
-  32
-  00:01:34,862 --> 00:01:37,054
-  bring gust
-  
-  33
-  00:01:37,862 --> 00:01:39,212
-  next
-  
-  34
-  00:01:39,212 --> 00:01:40,804
-  make return
-  
-  35
-  00:01:40,804 --> 00:01:43,057
-  square
-  
-  36
-  00:01:43,532 --> 00:01:45,513
-  bring each
-  
-  37
-  00:01:45,513 --> 00:01:47,583
-  spam
-  
-  38
-  00:01:47,583 --> 00:01:48,807
+  00:01:46,687 --> 00:01:50,066
   bring plex
   
   '
@@ -522,7 +1697,7 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endOffset': 1.1933924553324076,
+        'endOffset': 1.2279613583251674,
         'id': 'ee5d65f5-527d-43f1-b51d-665604167d9d',
         'phrase': 'snip foreign',
         'startOffset': 0,
@@ -537,10 +1712,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
           },
         ],
-        'endOffset': 3.4699573543349587,
+        'endOffset': 3.5054043583242063,
         'id': '9c49ac37-0633-436a-aab2-dba60d7340e4',
         'phrase': 'word index',
-        'startOffset': 2.0589715913248554,
+        'startOffset': 1.2279613583251674,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -552,10 +1727,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endOffset': 4.895421251336423,
+        'endOffset': 4.935483753333877,
         'id': '467310aa-20fc-4d1c-a8fa-2787f0f7490b',
         'phrase': 'numb one',
-        'startOffset': 3.978918318318513,
+        'startOffset': 3.5054043583242063,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -567,10 +1742,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
           },
         ],
-        'endOffset': 6.282212096326596,
+        'endOffset': 6.335018944331871,
         'id': 'e8867838-7e18-4dd6-afbf-081feaee68d8',
         'phrase': 'spam',
-        'startOffset': 5.179017689328369,
+        'startOffset': 4.935483753333877,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -582,10 +1757,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/formatters.talon#L24',
           },
         ],
-        'endOffset': 8.21549356932713,
+        'endOffset': 8.268162203328878,
         'id': 'd2b9fb22-709c-40a7-a2cf-52e68c522776',
         'phrase': 'word numb',
-        'startOffset': 6.947036377330853,
+        'startOffset': 6.335018944331871,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -597,10 +1772,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endOffset': 9.662823938330014,
+        'endOffset': 9.696551436327475,
         'id': '1f830aa7-537b-45ef-a87e-bc6e790906ee',
         'phrase': 'numb one',
-        'startOffset': 8.747013899325005,
+        'startOffset': 8.268162203328878,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -612,10 +1787,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endOffset': 11.819054015331979,
+        'endOffset': 11.857365870326369,
         'id': 'af20959b-934c-4c0e-a129-9d02b7f46cba',
         'phrase': 'chuck fourth car',
-        'startOffset': 10.277886427329697,
+        'startOffset': 9.696551436327475,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -627,10 +1802,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endOffset': 13.541606669330697,
+        'endOffset': 14.322570449309982,
         'id': 'c1a32cd5-401f-43a4-ba79-98d604f1330d',
         'phrase': 'next',
-        'startOffset': 12.379151775328985,
+        'startOffset': 11.857365870326369,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -642,10 +1817,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L37',
           },
         ],
-        'endOffset': 16.78970759632842,
+        'endOffset': 17.293320889309374,
         'id': '30f3f2b1-90ab-4aa9-ad52-f2ff7eb2cad6',
         'phrase': 'funk enumerate',
-        'startOffset': 15.347226530329984,
+        'startOffset': 14.322570449309982,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -657,10 +1832,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 19.637919811330114,
+        'endOffset': 19.933389249302543,
         'id': '55a09e37-df0d-4cab-9506-0661f71dfcca',
         'phrase': 'bring made',
-        'startOffset': 18.317976970329376,
+        'startOffset': 17.293320889309374,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -672,10 +1847,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endOffset': 21.933510753328058,
+        'endOffset': 22.992270330348227,
         'id': 'd64942cb-7228-4de5-89e3-1a26edccd1b4',
         'phrase': 'next',
-        'startOffset': 20.95804533032254,
+        'startOffset': 19.933389249302543,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -687,10 +1862,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endOffset': 25.24365157133628,
+        'endOffset': 25.722868423298912,
         'id': '2999985d-b87c-4508-b874-138f8b3ca606',
         'phrase': 'snip foreign',
-        'startOffset': 24.01946040932865,
+        'startOffset': 22.994804328308653,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -702,10 +1877,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 28.49919490033256,
+        'endOffset': 29.822308794350654,
         'id': 'c6e37a50-faad-4a2e-aa51-d847e86ecdc5',
         'phrase': 'bring plex past one',
-        'startOffset': 26.74752450431891,
+        'startOffset': 25.722868423298912,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -724,10 +1899,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/cancel.talon#L2',
           },
         ],
-        'endOffset': 34.71155882932556,
+        'endOffset': 34.84311955930139,
         'id': '04a5e64c-d06c-4c89-87d1-3ca78a9dea25',
         'phrase': 'clear four cancel cancel',
-        'startOffset': 31.849111573321473,
+        'startOffset': 30.824455492301475,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -739,10 +1914,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endOffset': 38.24142870532717,
+        'endOffset': 39.16311958131087,
         'id': '622a995e-75bd-4134-9ae6-0b7770cee90f',
         'phrase': 'clear last car drum and urge',
-        'startOffset': 35.86777564032139,
+        'startOffset': 34.84311955930139,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -754,10 +1929,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endOffset': 41.34819570133016,
+        'endOffset': 41.38430004133455,
         'id': 'af5564b8-d532-4aa6-b7d6-2cc18641c74c',
         'phrase': 'numb two',
-        'startOffset': 40.18777566233087,
+        'startOffset': 39.16311958131087,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -769,10 +1944,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L4',
           },
         ],
-        'endOffset': 43.57984110733572,
+        'endOffset': 44.90368282134569,
         'id': '0dd2016b-4c9a-46f6-bafd-d44ea5f266bc',
         'phrase': 'pre stack',
-        'startOffset': 42.259741275325844,
+        'startOffset': 41.38430004133455,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -784,10 +1959,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 48.11948699732796,
+        'endOffset': 48.42956269633044,
         'id': '8401d21f-99b6-454e-b2d9-dc163e806e3c',
         'phrase': 'bring call air',
-        'startOffset': 46.57985365431717,
+        'startOffset': 45.55519757329717,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -799,10 +1974,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L7',
           },
         ],
-        'endOffset': 50.321039626333125,
+        'endOffset': 50.35746652232968,
         'id': 'f21a2863-5e57-48d4-85a9-a542a957c512',
         'phrase': 'tug',
-        'startOffset': 49.33990853232002,
+        'startOffset': 48.42956269633044,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -814,10 +1989,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
           },
         ],
-        'endOffset': 51.786190845336144,
+        'endOffset': 51.88320192729703,
         'id': '3b4e7d98-8c9f-409e-bf35-6844aa30fa61',
         'phrase': 'square',
-        'startOffset': 50.65988620832116,
+        'startOffset': 50.35746652232968,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -829,10 +2004,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 53.856955137324015,
+        'endOffset': 54.15058288832564,
         'id': '24ace872-df97-43e2-8a52-54f4253b902e',
         'phrase': 'bring plex',
-        'startOffset': 52.90785800831703,
+        'startOffset': 51.88320192729703,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -844,10 +2019,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
           },
         ],
-        'endOffset': 56.23100568533312,
+        'endOffset': 56.26761117532636,
         'id': '4c9957d4-1bd7-4814-8ede-b1ced2591706',
         'phrase': 'make plus',
-        'startOffset': 55.099950488324005,
+        'startOffset': 54.15058288832564,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -859,10 +2034,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/numbers.talon#L3',
           },
         ],
-        'endOffset': 58.20990153933429,
+        'endOffset': 58.24885952033413,
         'id': '152f281d-4036-49e5-9dc0-7ab59ded5d97',
         'phrase': 'numb one',
-        'startOffset': 57.078617381326815,
+        'startOffset': 56.26761117532636,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -874,10 +2049,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L4',
           },
         ],
-        'endOffset': 59.9125470623277,
+        'endOffset': 60.98312780834659,
         'id': '4407f358-c472-4621-ab7f-b26b88a0357a',
         'phrase': 'stack',
-        'startOffset': 58.99864580032784,
+        'startOffset': 58.24885952033413,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -889,10 +2064,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/misc/keys.talon#L6',
           },
         ],
-        'endOffset': 66.76942710933702,
+        'endOffset': 66.80353181633302,
         'id': 'fd92e6c1-b082-4f29-8110-683621368602',
         'phrase': 'scrape',
-        'startOffset': 65.42010378232419,
+        'startOffset': 64.39544770130419,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -904,10 +2079,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/generic_editor.talon#L37',
           },
         ],
-        'endOffset': 68.21962144132897,
+        'endOffset': 69.2794117433541,
         'id': '27782822-8b85-4b2e-8de8-c0a40643df39',
         'phrase': 'south',
-        'startOffset': 67.46013374532242,
+        'startOffset': 66.80353181633302,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -919,10 +2094,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless-snippets.talon#L5',
           },
         ],
-        'endOffset': 78.28374863532565,
+        'endOffset': 79.3588676513491,
         'id': '1ecd7074-14fa-44e0-8e0e-5fd86b2000bc',
         'phrase': 'snip if',
-        'startOffset': 77.0282913513239,
+        'startOffset': 76.0036352703039,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -934,10 +2109,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 85.44730201532559,
+        'endOffset': 85.75477179432539,
         'id': 'ad7ab9e7-e4d1-41a3-875b-dbf035719ac6',
         'phrase': 'bring urge',
-        'startOffset': 84.43904435032357,
+        'startOffset': 83.41438826930357,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -949,10 +2124,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L20',
           },
         ],
-        'endOffset': 87.96648783666994,
+        'endOffset': 88.0245169656652,
         'id': '94158bf7-0d97-4687-9a24-74eb2cc70a4c',
         'phrase': 'make plus',
-        'startOffset': 86.73192712866391,
+        'startOffset': 85.75477179432539,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -964,10 +2139,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 90.05841971667057,
+        'endOffset': 90.35825230966536,
         'id': '0761a05a-0cb9-42c5-8c65-b2276b35e896',
         'phrase': 'bring two',
-        'startOffset': 88.83341536065079,
+        'startOffset': 88.0245169656652,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -979,10 +2154,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/operators.talon#L31',
           },
         ],
-        'endOffset': 92.4221267146592,
+        'endOffset': 93.49067860967948,
         'id': '96ce1831-4b94-4681-ae8b-54c516169be2',
         'phrase': 'is equal',
-        'startOffset': 91.35340828966098,
+        'startOffset': 90.35825230966536,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -994,10 +2169,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 96.05474012965958,
+        'endOffset': 96.83820356064261,
         'id': 'f9f1e13f-c44c-4e37-95ef-72ba1e9f187b',
         'phrase': 'bring gust',
-        'startOffset': 94.86290582465396,
+        'startOffset': 93.83824974363397,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1009,10 +2184,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/apps/vscode/vscode.talon#L456',
           },
         ],
-        'endOffset': 98.74690978666574,
+        'endOffset': 98.78815265766268,
         'id': 'a9c9b726-3a92-4e6e-98bf-f2158a4619de',
         'phrase': 'next',
-        'startOffset': 97.86285964166261,
+        'startOffset': 96.83820356064261,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1024,10 +2199,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/lang/programming.talon#L33',
           },
         ],
-        'endOffset': 100.47246946066541,
+        'endOffset': 100.52531730367143,
         'id': 'dca1dff2-b589-41ef-bd72-d159ecadd682',
         'phrase': 'make return',
-        'startOffset': 99.21224602465615,
+        'startOffset': 98.78815265766268,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1039,10 +2214,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L61',
           },
         ],
-        'endOffset': 102.0572168276655,
+        'endOffset': 102.50773955364438,
         'id': '900a31b4-24e7-45e5-9cc9-e688910aab04',
         'phrase': 'square',
-        'startOffset': 100.80433844965107,
+        'startOffset': 100.52531730367143,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1054,10 +2229,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 104.66604826466452,
+        'endOffset': 104.96200615167133,
         'id': 'f8cf1e6e-6d91-4087-96c6-9d9f59a7bc88',
         'phrase': 'bring each',
-        'startOffset': 103.53239563466438,
+        'startOffset': 102.50773955364438,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1069,10 +2244,10 @@
             'ruleUri': 'https://github.com/pokey/pokey_talon/blob/db25604627147533d3f92871e39bda558bb2f22a/text/symbols.talon#L11',
           },
         ],
-        'endOffset': 106.64593825066792,
+        'endOffset': 106.6872562726591,
         'id': '9d0b3bd3-ea35-49a5-be1c-5d6b67c5615a',
         'phrase': 'spam',
-        'startOffset': 105.51373602565825,
+        'startOffset': 104.96200615167133,
       },
       <class 'dict'> {
         'commands': <class 'list'> [
@@ -1084,10 +2259,10 @@
             'ruleUri': 'https://github.com/cursorless-dev/cursorless-talon/blob/eb5e57c49b8f854f13ca1671b67d80a91c832c2f/src/cursorless.talon#L13',
           },
         ],
-        'endOffset': 108.8079381686645,
+        'endOffset': 110.06666666666666,
         'id': '118ce2e1-cff6-4ff8-aa9c-84bef5148867',
         'phrase': 'bring plex',
-        'startOffset': 107.58310705465071,
+        'startOffset': 106.6872562726591,
       },
     ],
     'youtubeSlug': '0ZZb12Qp6-0',

@@ -117,11 +117,14 @@ def extract_media_reference(
     return clip.media_reference
 
 
-FREEZE_FRAME_SPEED = 0.997122 / 100
-FREEZE_FRAME_SPEED_STR = str(FREEZE_FRAME_SPEED * 100)
+# To do a freeze frame we actually just slow the source video down a bunch. The
+# below speed is the speed which we use for freeze frame, where 1 is full speed.
+# Note that we can't make this speed too slow, because the source timestamps get
+# divided by this value, and if they're two large things get messed up
+FREEZE_FRAME_SPEED = 0.997122 / 300
 
-# We'll set target start time of unhighlighted clip to be start of phrase minus
-# 1.02465608102 seconds
+# Speed is expected to be a string where 100 represents full speed
+FREEZE_FRAME_SPEED_STR = str(FREEZE_FRAME_SPEED * 100)
 
 
 def create_freeze_frame(

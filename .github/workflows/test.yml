@@ -15,6 +15,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: abatilo/actions-poetry@v2.0.0
+
+      # From https://medium.com/@vanflymen/blazing-fast-ci-with-github-actions-poetry-black-and-pytest-9e74299dd4a5
       - name: Cache Poetry virtualenv
         uses: actions/cache@v1
         id: cache

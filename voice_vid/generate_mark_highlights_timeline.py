@@ -62,7 +62,8 @@ def generate_mark_highlights_timeline(
                 media_reference=media_reference,
                 source_range=otio.opentime.TimeRange(
                     start_time=(
-                        highlight_timing.target_start_seconds - highlight_timing.shift
+                        highlight_timing.target_start_seconds
+                        + highlight_timing.target_to_source_shift
                     ),
                     duration=transition_time,
                 ),

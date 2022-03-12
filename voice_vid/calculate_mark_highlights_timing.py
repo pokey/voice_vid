@@ -10,7 +10,7 @@ from voice_vid.io.parse_transcript import TranscriptItem
 @dataclass
 class Highlight:
     transcript_item: TranscriptItem
-    shift: otio.opentime.RationalTime
+    target_to_source_shift: otio.opentime.RationalTime
     target_start_seconds: otio.opentime.RationalTime
     target_end_seconds: otio.opentime.RationalTime
     source_highlight_offset_seconds: otio.opentime.RationalTime
@@ -61,13 +61,16 @@ def get_highlight_timing(
             max(min(raw_seconds + shift_seconds, timeline_duration), 0), framerate
         )
 
-    def source_shift_and_clamp(raw_seconds: float):
+    def source_shift(raw_seconds: float):
         return talon_log_start + otio.opentime.RationalTime.from_seconds(
             raw_seconds, framerate
         )
 
     return Highlight(
-        shift=otio.opentime.RationalTime.from_seconds(shift_seconds, framerate),
+        target_to_source_shift=(
+            talon_log_start
+            - otio.opentime.RationalTime.from_seconds(shift_seconds, framerate)
+        ),
         transcript_item=reconciled_command.transcript_item,
         target_start_seconds=otio.opentime.RationalTime.from_seconds(
             reconciled_command.target_grace_start_seconds, framerate
@@ -75,10 +78,8 @@ def get_highlight_timing(
         # NB: We need the target to end exactly at command start so that it
         # obscures the highlight flash but doesn't obscure command execution
         target_end_seconds=target_shift_and_clamp(transcript_item.command_start),
-        source_highlight_offset_seconds=source_shift_and_clamp(
-            source_highlight_offset_seconds
-        ),
-        source_unhighlighted_offset_seconds=source_shift_and_clamp(
+        source_highlight_offset_seconds=source_shift(source_highlight_offset_seconds),
+        source_unhighlighted_offset_seconds=source_shift(
             transcript_item.pre_phrase_screenshot_offset_seconds
         ),
     )

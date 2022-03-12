@@ -122,7 +122,7 @@ def extract_media_reference(
 # below speed is the speed which we use for freeze frame, where 1 is full speed.
 # Note that we can't make this speed too slow, because the source timestamps get
 # divided by this value, and if they're two large things get messed up
-FREEZE_FRAME_SPEED = 0.997122 / 300
+FREEZE_FRAME_SPEED = 0.997122 / 500
 
 # Speed is expected to be a string where 100 represents full speed
 FREEZE_FRAME_SPEED_STR = str(FREEZE_FRAME_SPEED * 100)

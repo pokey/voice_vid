@@ -1,8 +1,14 @@
-import giturlparse
 import json
 from dataclasses import dataclass
+from functools import reduce
+from itertools import groupby
 from pathlib import Path
 from typing import Any, Optional
+from uuid import uuid4
+
+import giturlparse
+
+from voice_vid.deep_merge import deep_merge
 
 
 @dataclass
@@ -25,10 +31,11 @@ class Command:
 @dataclass(frozen=True)
 class TranscriptItem:
     id: str
+    is_error: bool
     phrase_start: float
     phrase_end: float
     command_start: float
-    command_end: float
+    command_end: Optional[float]
     mark_highlight_screenshot_offset_seconds: Optional[float]
     pre_phrase_screenshot_offset_seconds: float
     phrase: str
@@ -96,12 +103,23 @@ def construct_repo_info(raw_repo_info: dict[str, Any]):
 
 
 def parse_talon_transcript(path: Path):
-    raw_transcript: list[dict[str, Any]] = [
+    fragmented_raw_transcript: list[dict[str, Any]] = [
         json.loads(line) for line in path.read_text().splitlines()
+    ]
+
+    # If two items appear with the same id we do a deep merge on everything in
+    # that item
+    raw_transcript = [
+        reduce(deep_merge, group)
+        for _, group in groupby(
+            fragmented_raw_transcript, lambda item: item.get("id", uuid4())
+        )
     ]
     initial_info = next(
         item for item in raw_transcript if item["type"] == "initialInfo"
     )
+    initial_info["version"] = initial_info.get("version", 0)
+
     talon_dir = Path(initial_info["talonDir"])
 
     repo_infos = [
@@ -112,7 +130,9 @@ def parse_talon_transcript(path: Path):
 
     return Transcript(
         items=[
-            construct_transcript_item(talon_dir, repo_infos, raw_transcript_item)
+            construct_transcript_item(
+                initial_info["version"], talon_dir, repo_infos, raw_transcript_item
+            )
             for raw_transcript_item in raw_transcript
             if raw_transcript_item["type"] == "talonCommandPhrase"
         ],
@@ -122,7 +142,7 @@ def parse_talon_transcript(path: Path):
 
 
 def construct_transcript_item(
-    talon_dir: Path, repo_infos: list[RepoInfo], raw_transcript_item: dict
+    version: int, talon_dir: Path, repo_infos: list[RepoInfo], raw_transcript_item: dict
 ):
     raw_screenshots = raw_transcript_item["screenshots"]
     decorated_mark_screenshots = raw_screenshots["decoratedMarks"]
@@ -142,7 +162,14 @@ def construct_transcript_item(
         pre_phrase_screenshot_offset_seconds=raw_screenshots["preCommand"][
             "timeOffset"
         ],
-        command_end=raw_transcript_item["timeOffsets"]["postPhraseCallbackStart"],
+        command_end=raw_transcript_item["timeOffsets"].get(
+            "postPhraseCallbackStart", None
+        ),
+        # In version 0, we only got commands that completed successfully. In
+        # later versions, we also law commands that didn't complete
+        # successfully. We know the command completed successfully if it has a
+        # `commandCompleted` attribute set
+        is_error=not raw_transcript_item.get("commandCompleted", version == 0),
         phrase=raw_transcript_item["phrase"],
         commands=[
             construct_command(talon_dir, repo_infos, raw_command)

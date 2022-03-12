@@ -1,10 +1,9 @@
 from dataclasses import dataclass
-from datetime import timedelta
 from typing import Optional
+
 from voice_vid.compute_command_ranges import CommandTiming
 from voice_vid.io.parse_config import Config
-from voice_vid.io.parse_transcript import Command, Transcript, TranscriptItem
-from voice_vid.reconcile_commands import ReconciledCommand
+from voice_vid.io.parse_transcript import Command
 
 
 @dataclass
@@ -14,6 +13,7 @@ class OutputTranscriptItem:
     end_offset: float
     phrase: str
     commands: list[Command]
+    is_error: bool
 
 
 @dataclass
@@ -37,6 +37,7 @@ def generate_transcript(
                 end_offset=reconciled_command.target_grace_end_seconds,
                 phrase=reconciled_command.transcript_item.phrase,
                 commands=reconciled_command.transcript_item.commands,
+                is_error=reconciled_command.transcript_item.is_error,
             )
             for reconciled_command in reconciled_commands
         ],

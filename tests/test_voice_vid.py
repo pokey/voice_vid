@@ -10,7 +10,7 @@ from tests.data import get_data_path
 
 runner = CliRunner()
 
-testdata = [("simple"), ("fragmented")]
+testdata = [("simple"), ("version_0")]
 
 
 @pytest.mark.parametrize("data_dir", testdata)

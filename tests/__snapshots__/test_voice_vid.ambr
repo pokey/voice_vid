@@ -1,4 +1,4 @@
-# name: test_mark_highlights[fragmented]
+# name: test_mark_highlights[simple]
   '
   <?xml version="1.0" ?>
   <xmeml version="4">
@@ -596,7 +596,7 @@
   
   '
 ---
-# name: test_mark_highlights[simple]
+# name: test_mark_highlights[version_0]
   '
   <?xml version="1.0" ?>
   <xmeml version="4">
@@ -2083,7 +2083,7 @@
   
   '
 ---
-# name: test_reconcile[fragmented]
+# name: test_reconcile[simple]
   '
   {"shiftSeconds": 0.35, "transcriptItem": "1762b0dc-8d8a-4fe9-9cca-4f7252fa5c80", "targetGraceStartSeconds": 9.62734799895836, "targetStartSeconds": 10.65200407997836, "targetEndSeconds": 12.545680538998203, "targetGraceEndSeconds": 13.570336620018203}
   {"shiftSeconds": 0.35, "transcriptItem": "d7ba0667-b551-4a6a-ab0a-4122da076c60", "targetGraceStartSeconds": 19.287294874954316, "targetStartSeconds": 20.311950955974318, "targetEndSeconds": 23.17679570599976, "targetGraceEndSeconds": 23.576632816981803}
@@ -2094,7 +2094,7 @@
   {"shiftSeconds": 0.35, "transcriptItem": "7a735756-3c56-4caf-b93c-7b401a094d2c", "targetGraceStartSeconds": 43.616626824889615, "targetStartSeconds": 44.64128290590961, "targetEndSeconds": 45.74367362199846, "targetGraceEndSeconds": 46.483333333333334}
   '
 ---
-# name: test_reconcile[simple]
+# name: test_reconcile[version_0]
   '
   {"shiftSeconds": -13.866666666666667, "transcriptItem": "ee5d65f5-527d-43f1-b51d-665604167d9d", "targetGraceStartSeconds": 0, "targetStartSeconds": 0, "targetEndSeconds": 1.2279613583251674, "targetGraceEndSeconds": 1.2279613583251674}
   {"shiftSeconds": -13.866666666666667, "transcriptItem": "9c49ac37-0633-436a-aab2-dba60d7340e4", "targetGraceStartSeconds": 1.2279613583251674, "targetStartSeconds": 2.0589715913248554, "targetEndSeconds": 3.5054043583242063, "targetGraceEndSeconds": 3.5054043583242063}
@@ -2136,7 +2136,7 @@
   {"shiftSeconds": -21.083333333333332, "transcriptItem": "118ce2e1-cff6-4ff8-aa9c-84bef5148867", "targetGraceStartSeconds": 106.6872562726591, "targetStartSeconds": 107.58310705465071, "targetEndSeconds": 109.10771828866079, "targetGraceEndSeconds": 110.06666666666666}
   '
 ---
-# name: test_subtitles[fragmented]
+# name: test_subtitles[simple]
   '
   1
   00:00:09,627 --> 00:00:13,570
@@ -2168,7 +2168,7 @@
   
   '
 ---
-# name: test_subtitles[simple]
+# name: test_subtitles[version_0]
   '
   1
   00:00:00,000 --> 00:00:01,227
@@ -2324,7 +2324,7 @@
   
   '
 ---
-# name: test_transcript[fragmented]
+# name: test_transcript[simple]
   <class 'dict'> {
     'title': 'Test fragmented',
     'transcript': <class 'list'> [
@@ -2444,7 +2444,7 @@
     'youtubeSlug': None,
   }
 ---
-# name: test_transcript[simple]
+# name: test_transcript[version_0]
   <class 'dict'> {
     'title': 'Two Sum explainer',
     'transcript': <class 'list'> [

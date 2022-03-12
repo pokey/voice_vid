@@ -75,8 +75,8 @@
                                   <duration>10</duration>
                                   <start>578</start>
                                   <end>-1</end>
-                                  <in>578</in>
-                                  <out>598</out>
+                                  <in>568</in>
+                                  <out>588</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -130,8 +130,8 @@
                                   <duration>155</duration>
                                   <start>-1</start>
                                   <end>-1</end>
-                                  <in>374281</in>
-                                  <out>374456</out>
+                                  <in>369267</in>
+                                  <out>369442</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -185,8 +185,8 @@
                                   <duration>10</duration>
                                   <start>-1</start>
                                   <end>753</end>
-                                  <in>370174</in>
-                                  <out>370194</out>
+                                  <in>365160</in>
+                                  <out>365180</out>
                               </clipitem>
                               <clipitem frameBlend="FALSE" id="clipitem-4">
                                   <file id="file-1"/>
@@ -202,8 +202,8 @@
                                   <duration>10</duration>
                                   <start>1157</start>
                                   <end>-1</end>
-                                  <in>1157</in>
-                                  <out>1177</out>
+                                  <in>1147</in>
+                                  <out>1167</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -257,8 +257,8 @@
                                   <duration>213</duration>
                                   <start>-1</start>
                                   <end>-1</end>
-                                  <in>694252</in>
-                                  <out>694485</out>
+                                  <in>689237</in>
+                                  <out>689471</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -312,8 +312,8 @@
                                   <duration>10</duration>
                                   <start>-1</start>
                                   <end>1391</end>
-                                  <in>690269</in>
-                                  <out>690289</out>
+                                  <in>685255</in>
+                                  <out>685275</out>
                               </clipitem>
                               <clipitem frameBlend="FALSE" id="clipitem-7">
                                   <file id="file-1"/>
@@ -329,8 +329,8 @@
                                   <duration>10</duration>
                                   <start>1524</start>
                                   <end>-1</end>
-                                  <in>1524</in>
-                                  <out>1544</out>
+                                  <in>1514</in>
+                                  <out>1534</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -384,8 +384,8 @@
                                   <duration>188</duration>
                                   <start>-1</start>
                                   <end>-1</end>
-                                  <in>865671</in>
-                                  <out>865880</out>
+                                  <in>860657</in>
+                                  <out>860865</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -439,8 +439,8 @@
                                   <duration>10</duration>
                                   <start>-1</start>
                                   <end>1733</end>
-                                  <in>861748</in>
-                                  <out>861768</out>
+                                  <in>856733</in>
+                                  <out>856753</out>
                               </clipitem>
                               <clipitem frameBlend="FALSE" id="clipitem-10">
                                   <file id="file-1"/>
@@ -456,8 +456,8 @@
                                   <duration>10</duration>
                                   <start>1994</start>
                                   <end>-1</end>
-                                  <in>1994</in>
-                                  <out>2014</out>
+                                  <in>1984</in>
+                                  <out>2004</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -511,8 +511,8 @@
                                   <duration>230</duration>
                                   <start>-1</start>
                                   <end>-1</end>
-                                  <in>1122368</in>
-                                  <out>1122618</out>
+                                  <in>1117353</in>
+                                  <out>1117604</out>
                               </clipitem>
                               <transitionitem>
                                   <alignment>center</alignment>
@@ -566,8 +566,8 @@
                                   <duration>10</duration>
                                   <start>-1</start>
                                   <end>2245</end>
-                                  <in>1118511</in>
-                                  <out>1118531</out>
+                                  <in>1113497</in>
+                                  <out>1113517</out>
                               </clipitem>
                           </track>
                       </video>
@@ -2085,13 +2085,13 @@
 ---
 # name: test_reconcile[simple]
   '
-  {"shiftSeconds": 0.35, "transcriptItem": "1762b0dc-8d8a-4fe9-9cca-4f7252fa5c80", "targetGraceStartSeconds": 9.62734799895836, "targetStartSeconds": 10.65200407997836, "targetEndSeconds": 12.545680538998203, "targetGraceEndSeconds": 13.570336620018203}
-  {"shiftSeconds": 0.35, "transcriptItem": "d7ba0667-b551-4a6a-ab0a-4122da076c60", "targetGraceStartSeconds": 19.287294874954316, "targetStartSeconds": 20.311950955974318, "targetEndSeconds": 23.17679570599976, "targetGraceEndSeconds": 23.576632816981803}
-  {"shiftSeconds": 0.35, "transcriptItem": "495b0aeb-bc33-4ada-90ac-7bcec926e895", "targetGraceStartSeconds": 23.576632816981803, "targetStartSeconds": 24.601288898001805, "targetEndSeconds": 25.406701137998972, "targetGraceEndSeconds": 25.406701137998972}
-  {"shiftSeconds": 0.35, "transcriptItem": "81b6c1d5-328c-4183-993d-cb3ec9ce11e4", "targetGraceStartSeconds": 25.406701137998972, "targetStartSeconds": 26.252054600945122, "targetEndSeconds": 28.876753428999656, "targetGraceEndSeconds": 29.901409510019658}
-  {"shiftSeconds": 0.35, "transcriptItem": "58403ab8-cd1a-4832-94da-e511bc6a253b", "targetGraceStartSeconds": 33.23669468093133, "targetStartSeconds": 34.26135076195133, "targetEndSeconds": 37.41001363199903, "targetGraceEndSeconds": 37.41001363199903}
-  {"shiftSeconds": 0.35, "transcriptItem": "328a5b04-4f73-48d0-98fc-d4b1865027eb", "targetGraceStartSeconds": 37.41001363199903, "targetStartSeconds": 38.132108882969625, "targetEndSeconds": 39.21273812299987, "targetGraceEndSeconds": 40.23739420401987}
-  {"shiftSeconds": 0.35, "transcriptItem": "7a735756-3c56-4caf-b93c-7b401a094d2c", "targetGraceStartSeconds": 43.616626824889615, "targetStartSeconds": 44.64128290590961, "targetEndSeconds": 45.74367362199846, "targetGraceEndSeconds": 46.483333333333334}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "1762b0dc-8d8a-4fe9-9cca-4f7252fa5c80", "targetGraceStartSeconds": 9.460681332291694, "targetStartSeconds": 10.485337413311694, "targetEndSeconds": 12.379013872331537, "targetGraceEndSeconds": 13.403669953351537}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "d7ba0667-b551-4a6a-ab0a-4122da076c60", "targetGraceStartSeconds": 19.12062820828765, "targetStartSeconds": 20.14528428930765, "targetEndSeconds": 23.01012903933309, "targetGraceEndSeconds": 23.409966150315135}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "495b0aeb-bc33-4ada-90ac-7bcec926e895", "targetGraceStartSeconds": 23.409966150315135, "targetStartSeconds": 24.434622231335137, "targetEndSeconds": 25.240034471332304, "targetGraceEndSeconds": 25.240034471332304}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "81b6c1d5-328c-4183-993d-cb3ec9ce11e4", "targetGraceStartSeconds": 25.240034471332304, "targetStartSeconds": 26.085387934278454, "targetEndSeconds": 28.71008676233299, "targetGraceEndSeconds": 29.73474284335299}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "58403ab8-cd1a-4832-94da-e511bc6a253b", "targetGraceStartSeconds": 33.07002801426466, "targetStartSeconds": 34.094684095284656, "targetEndSeconds": 37.24334696533236, "targetGraceEndSeconds": 37.24334696533236}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "328a5b04-4f73-48d0-98fc-d4b1865027eb", "targetGraceStartSeconds": 37.24334696533236, "targetStartSeconds": 37.965442216302954, "targetEndSeconds": 39.0460714563332, "targetGraceEndSeconds": 40.0707275373532}
+  {"shiftSeconds": 0.18333333333333332, "transcriptItem": "7a735756-3c56-4caf-b93c-7b401a094d2c", "targetGraceStartSeconds": 43.44996015822294, "targetStartSeconds": 44.47461623924294, "targetEndSeconds": 45.57700695533179, "targetGraceEndSeconds": 46.483333333333334}
   '
 ---
 # name: test_reconcile[version_0]

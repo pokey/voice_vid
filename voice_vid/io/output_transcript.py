@@ -15,6 +15,7 @@ def write(file: TextIO, transcript: OutputTranscript):
                     "startOffset": transcript_item.start_offset,
                     "endOffset": transcript_item.end_offset,
                     "phrase": transcript_item.phrase,
+                    "isError": transcript_item.is_error,
                     "commands": [
                         {
                             "phrase": command.phrase,

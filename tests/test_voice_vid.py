@@ -1,16 +1,21 @@
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typer.testing import CliRunner
-from tests.data import get_data_path
 
+import pytest
+from typer.testing import CliRunner
 from voice_vid.main import app
+
+from tests.data import get_data_path
 
 runner = CliRunner()
 
+testdata = [("simple"), ("version_0")]
 
-def test_reconcile(snapshot):
-    index_path = get_data_path("simple") / "index.toml"
+
+@pytest.mark.parametrize("data_dir", testdata)
+def test_reconcile(snapshot, data_dir):
+    index_path = get_data_path(data_dir) / "index.toml"
 
     result = runner.invoke(app, ["reconcile", str(index_path)])
 
@@ -18,8 +23,9 @@ def test_reconcile(snapshot):
     assert result.stdout == snapshot
 
 
-def test_subtitles(snapshot):
-    data_dir = get_data_path("simple")
+@pytest.mark.parametrize("data_dir", testdata)
+def test_subtitles(snapshot, data_dir):
+    data_dir = get_data_path(data_dir)
     index_path = data_dir / "index.toml"
     reconciled_path = data_dir / "reconciled.jsonl"
 
@@ -31,8 +37,9 @@ def test_subtitles(snapshot):
     assert result.stdout == snapshot
 
 
-def test_transcript(snapshot):
-    data_dir = get_data_path("simple")
+@pytest.mark.parametrize("data_dir", testdata)
+def test_transcript(snapshot, data_dir):
+    data_dir = get_data_path(data_dir)
     index_path = data_dir / "index.toml"
     reconciled_path = data_dir / "reconciled.jsonl"
 
@@ -44,8 +51,9 @@ def test_transcript(snapshot):
     assert json.loads(result.stdout) == snapshot
 
 
-def test_mark_highlights(snapshot):
-    data_dir = get_data_path("simple")
+@pytest.mark.parametrize("data_dir", testdata)
+def test_mark_highlights(snapshot, data_dir):
+    data_dir = get_data_path(data_dir)
     index_path = data_dir / "index.toml"
     reconciled_path = data_dir / "reconciled.jsonl"
 

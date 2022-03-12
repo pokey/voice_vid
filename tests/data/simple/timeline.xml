@@ -3,7 +3,7 @@
 <xmeml version="5">
     <sequence>
         <name>Timeline 1 (Resolve)</name>
-        <duration>6603</duration>
+        <duration>2788</duration>
         <rate>
             <timebase>60</timebase>
             <ntsc>FALSE</ntsc>
@@ -22,26 +22,26 @@
         <media>
             <video>
                 <track>
-                    <clipitem id="Screen Recording 2022-02-19 at 15.10.59.mov 0">
-                        <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
-                        <duration>8169</duration>
+                    <clipitem id="Screen Recording 2022-03-12 at 17.54.47.mov 0">
+                        <name>Screen Recording 2022-03-12 at 17.54.47.mov</name>
+                        <duration>2789</duration>
                         <rate>
                             <timebase>60</timebase>
                             <ntsc>FALSE</ntsc>
                         </rate>
                         <start>0</start>
-                        <end>5214</end>
+                        <end>2789</end>
                         <enabled>TRUE</enabled>
-                        <in>858</in>
-                        <out>6072</out>
-                        <file id="Screen Recording 2022-02-19 at 15.10.59.mov 2">
-                            <duration>8169</duration>
+                        <in>0</in>
+                        <out>2789</out>
+                        <file id="Screen Recording 2022-03-12 at 17.54.47.mov 2">
+                            <duration>2789</duration>
                             <rate>
                                 <timebase>60</timebase>
                                 <ntsc>FALSE</ntsc>
                             </rate>
-                            <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
-                            <pathurl>file:///Users/pokey/Movies/Cursorless/Completed/Two%20Sum%20explainer/Screen%20Recording%202022-02-19%20at%2015.10.59.mov</pathurl>
+                            <name>Screen Recording 2022-03-12 at 17.54.47.mov</name>
+                            <pathurl>file:///Users/pokey/Desktop/Screen%20Recording%202022-03-12%20at%2017.54.47.mov</pathurl>
                             <timecode>
                                 <string>00:00:00:00</string>
                                 <displayformat>NDF</displayformat>
@@ -52,7 +52,7 @@
                             </timecode>
                             <media>
                                 <video>
-                                    <duration>8169</duration>
+                                    <duration>2789</duration>
                                     <samplecharacteristics>
                                         <width>3840</width>
                                         <height>2160</height>
@@ -67,7 +67,7 @@
                         <filter>
                             <enabled>TRUE</enabled>
                             <start>0</start>
-                            <end>8169</end>
+                            <end>2789</end>
                             <effect>
                                 <name>Basic Motion</name>
                                 <effectid>basic</effectid>
@@ -109,7 +109,7 @@
                         <filter>
                             <enabled>TRUE</enabled>
                             <start>0</start>
-                            <end>8169</end>
+                            <end>2789</end>
                             <effect>
                                 <name>Crop</name>
                                 <effectid>crop</effectid>
@@ -149,7 +149,7 @@
                         <filter>
                             <enabled>TRUE</enabled>
                             <start>0</start>
-                            <end>8169</end>
+                            <end>2789</end>
                             <effect>
                                 <name>Opacity</name>
                                 <effectid>opacity</effectid>
@@ -166,140 +166,13 @@
                             </effect>
                         </filter>
                         <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 0</linkclipref>
+                            <linkclipref>Screen Recording 2022-03-12 at 17.54.47.mov 0</linkclipref>
                         </link>
                         <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 5</linkclipref>
+                            <linkclipref>Screen Recording 2022-03-12 at 17.54.47.mov 3</linkclipref>
                         </link>
                         <comments/>
                     </clipitem>
-                    <clipitem id="Screen Recording 2022-02-19 at 15.10.59.mov 3">
-                        <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
-                        <duration>8169</duration>
-                        <rate>
-                            <timebase>60</timebase>
-                            <ntsc>FALSE</ntsc>
-                        </rate>
-                        <start>5214</start>
-                        <end>6604</end>
-                        <enabled>TRUE</enabled>
-                        <in>6505</in>
-                        <out>7895</out>
-                        <file id="Screen Recording 2022-02-19 at 15.10.59.mov 2"/>
-                        <compositemode>normal</compositemode>
-                        <filter>
-                            <enabled>TRUE</enabled>
-                            <start>0</start>
-                            <end>8169</end>
-                            <effect>
-                                <name>Basic Motion</name>
-                                <effectid>basic</effectid>
-                                <effecttype>motion</effecttype>
-                                <mediatype>video</mediatype>
-                                <effectcategory>motion</effectcategory>
-                                <parameter>
-                                    <name>Scale</name>
-                                    <parameterid>scale</parameterid>
-                                    <value>100</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>10000</valuemax>
-                                </parameter>
-                                <parameter>
-                                    <name>Center</name>
-                                    <parameterid>center</parameterid>
-                                    <value>
-                                        <horiz>0</horiz>
-                                        <vert>0</vert>
-                                    </value>
-                                </parameter>
-                                <parameter>
-                                    <name>Rotation</name>
-                                    <parameterid>rotation</parameterid>
-                                    <value>0</value>
-                                    <valuemin>-100000</valuemin>
-                                    <valuemax>100000</valuemax>
-                                </parameter>
-                                <parameter>
-                                    <name>Anchor Point</name>
-                                    <parameterid>centerOffset</parameterid>
-                                    <value>
-                                        <horiz>0</horiz>
-                                        <vert>0</vert>
-                                    </value>
-                                </parameter>
-                            </effect>
-                        </filter>
-                        <filter>
-                            <enabled>TRUE</enabled>
-                            <start>0</start>
-                            <end>8169</end>
-                            <effect>
-                                <name>Crop</name>
-                                <effectid>crop</effectid>
-                                <effecttype>motion</effecttype>
-                                <mediatype>video</mediatype>
-                                <effectcategory>motion</effectcategory>
-                                <parameter>
-                                    <name>left</name>
-                                    <parameterid>left</parameterid>
-                                    <value>0</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>100</valuemax>
-                                </parameter>
-                                <parameter>
-                                    <name>right</name>
-                                    <parameterid>right</parameterid>
-                                    <value>0</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>100</valuemax>
-                                </parameter>
-                                <parameter>
-                                    <name>top</name>
-                                    <parameterid>top</parameterid>
-                                    <value>0</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>100</valuemax>
-                                </parameter>
-                                <parameter>
-                                    <name>bottom</name>
-                                    <parameterid>bottom</parameterid>
-                                    <value>0</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>100</valuemax>
-                                </parameter>
-                            </effect>
-                        </filter>
-                        <filter>
-                            <enabled>TRUE</enabled>
-                            <start>0</start>
-                            <end>8169</end>
-                            <effect>
-                                <name>Opacity</name>
-                                <effectid>opacity</effectid>
-                                <effecttype>motion</effecttype>
-                                <mediatype>video</mediatype>
-                                <effectcategory>motion</effectcategory>
-                                <parameter>
-                                    <name>opacity</name>
-                                    <parameterid>opacity</parameterid>
-                                    <value>100</value>
-                                    <valuemin>0</valuemin>
-                                    <valuemax>100</valuemax>
-                                </parameter>
-                            </effect>
-                        </filter>
-                        <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 3</linkclipref>
-                        </link>
-                        <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 6</linkclipref>
-                        </link>
-                        <comments/>
-                    </clipitem>
-                    <enabled>TRUE</enabled>
-                    <locked>FALSE</locked>
-                </track>
-                <track>
                     <enabled>TRUE</enabled>
                     <locked>FALSE</locked>
                 </track>
@@ -326,109 +199,29 @@
             </video>
             <audio>
                 <track>
-                    <clipitem id="Screen Recording 2022-02-19 at 15.10.59.mov 5">
-                        <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
-                        <duration>8169</duration>
+                    <clipitem id="Screen Recording 2022-03-12 at 17.54.47.mov 3">
+                        <name>Screen Recording 2022-03-12 at 17.54.47.mov</name>
+                        <duration>2789</duration>
                         <rate>
                             <timebase>60</timebase>
                             <ntsc>FALSE</ntsc>
                         </rate>
                         <start>0</start>
-                        <end>5214</end>
+                        <end>2789</end>
                         <enabled>TRUE</enabled>
-                        <in>858</in>
-                        <out>6072</out>
-                        <file id="Screen Recording 2022-02-19 at 15.10.59.mov 2"/>
+                        <in>0</in>
+                        <out>2789</out>
+                        <file id="Screen Recording 2022-03-12 at 17.54.47.mov 2"/>
                         <sourcetrack>
                             <mediatype>audio</mediatype>
                             <trackindex>1</trackindex>
                         </sourcetrack>
                         <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 0</linkclipref>
+                            <linkclipref>Screen Recording 2022-03-12 at 17.54.47.mov 0</linkclipref>
                         </link>
                         <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 5</linkclipref>
+                            <linkclipref>Screen Recording 2022-03-12 at 17.54.47.mov 3</linkclipref>
                         </link>
-                        <comments/>
-                    </clipitem>
-                    <clipitem id="Screen Recording 2022-02-19 at 15.10.59.mov 6">
-                        <name>Screen Recording 2022-02-19 at 15.10.59.mov</name>
-                        <duration>8169</duration>
-                        <rate>
-                            <timebase>60</timebase>
-                            <ntsc>FALSE</ntsc>
-                        </rate>
-                        <start>5214</start>
-                        <end>6604</end>
-                        <enabled>TRUE</enabled>
-                        <in>6505</in>
-                        <out>7895</out>
-                        <file id="Screen Recording 2022-02-19 at 15.10.59.mov 2"/>
-                        <sourcetrack>
-                            <mediatype>audio</mediatype>
-                            <trackindex>1</trackindex>
-                        </sourcetrack>
-                        <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 3</linkclipref>
-                        </link>
-                        <link>
-                            <linkclipref>Screen Recording 2022-02-19 at 15.10.59.mov 6</linkclipref>
-                        </link>
-                        <comments/>
-                    </clipitem>
-                    <enabled>FALSE</enabled>
-                    <locked>FALSE</locked>
-                </track>
-                <track>
-                    <clipitem id="2022-02-19 15-10-59.mp4 0">
-                        <name>2022-02-19 15-10-59.mp4</name>
-                        <duration>8328</duration>
-                        <rate>
-                            <timebase>60</timebase>
-                            <ntsc>FALSE</ntsc>
-                        </rate>
-                        <start>0</start>
-                        <end>5214</end>
-                        <enabled>TRUE</enabled>
-                        <in>1003</in>
-                        <out>6217</out>
-                        <file id="2022-02-19 15-10-59.mp4 1">
-                            <duration>4164</duration>
-                            <rate>
-                                <timebase>30</timebase>
-                                <ntsc>FALSE</ntsc>
-                            </rate>
-                            <name>2022-02-19 15-10-59.mp4</name>
-                            <pathurl>file:///Users/pokey/Movies/Cursorless/Completed/Two%20Sum%20explainer/2022-02-19%2015-10-59.mp4</pathurl>
-                            <media>
-                                <audio>
-                                    <channelcount>2</channelcount>
-                                </audio>
-                            </media>
-                        </file>
-                        <sourcetrack>
-                            <mediatype>audio</mediatype>
-                            <trackindex>1</trackindex>
-                        </sourcetrack>
-                        <comments/>
-                    </clipitem>
-                    <clipitem id="2022-02-19 15-10-59.mp4 2">
-                        <name>2022-02-19 15-10-59.mp4</name>
-                        <duration>8328</duration>
-                        <rate>
-                            <timebase>60</timebase>
-                            <ntsc>FALSE</ntsc>
-                        </rate>
-                        <start>5214</start>
-                        <end>6604</end>
-                        <enabled>TRUE</enabled>
-                        <in>6650</in>
-                        <out>8040</out>
-                        <file id="2022-02-19 15-10-59.mp4 1"/>
-                        <sourcetrack>
-                            <mediatype>audio</mediatype>
-                            <trackindex>1</trackindex>
-                        </sourcetrack>
                         <comments/>
                     </clipitem>
                     <enabled>TRUE</enabled>

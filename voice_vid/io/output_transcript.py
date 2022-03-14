@@ -12,8 +12,10 @@ def write(file: TextIO, transcript: OutputTranscript):
             "transcript": [
                 {
                     "id": transcript_item.id,
+                    "graceStartOffset": transcript_item.grace_start_offset,
                     "startOffset": transcript_item.start_offset,
                     "endOffset": transcript_item.end_offset,
+                    "graceEndOffset": transcript_item.grace_end_offset,
                     "phrase": transcript_item.phrase,
                     "isError": transcript_item.is_error,
                     "commands": [

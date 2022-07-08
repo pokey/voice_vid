@@ -4,9 +4,9 @@ from pathlib import Path
 from typing import Optional
 
 import opentimelineio as otio
+
 from voice_vid.calculate_mark_highlights_timing import calculate_mark_highlights_timing
 from voice_vid.compute_command_ranges import CommandTiming
-
 from voice_vid.io.parse_config import Config
 from voice_vid.io.parse_transcript import Command
 
@@ -35,7 +35,7 @@ def generate_mark_highlights_timeline(
     media_reference = extract_media_reference(
         config.screen_recording_path, input_timeline
     )
-    framerate = int(media_reference.metadata["fcp_xml"]["rate"]["timebase"])
+    framerate = int(input_timeline.metadata["fcp_xml"]["timecode"]["rate"]["timebase"])
 
     highlight_timings = calculate_mark_highlights_timing(
         config, reconciled_commands, framerate, input_timeline.duration().to_seconds()

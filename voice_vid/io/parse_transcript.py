@@ -109,12 +109,18 @@ def parse_talon_transcript(path: Path):
 
     # If two items appear with the same id we do a deep merge on everything in
     # that item
-    raw_transcript = [
+    unfiltered = [
         reduce(deep_merge, group)
         for _, group in groupby(
             fragmented_raw_transcript, lambda item: item.get("id", uuid4())
         )
     ]
+    raw_transcript = list(
+        filter(
+            lambda x: "type" in x,
+            unfiltered,
+        )
+    )
     initial_info = next(
         item for item in raw_transcript if item["type"] == "initialInfo"
     )
@@ -129,13 +135,21 @@ def parse_talon_transcript(path: Path):
     ]
 
     return Transcript(
-        items=[
-            construct_transcript_item(
-                initial_info["version"], talon_dir, repo_infos, raw_transcript_item
+        items=list(
+            filter(
+                None,
+                [
+                    construct_transcript_item(
+                        initial_info["version"],
+                        talon_dir,
+                        repo_infos,
+                        raw_transcript_item,
+                    )
+                    for raw_transcript_item in raw_transcript
+                    if raw_transcript_item["type"] == "talonCommandPhrase"
+                ],
             )
-            for raw_transcript_item in raw_transcript
-            if raw_transcript_item["type"] == "talonCommandPhrase"
-        ],
+        ),
         repo_infos=repo_infos,
         talon_dir=talon_dir,
     )
@@ -153,26 +167,29 @@ def construct_transcript_item(
         else decorated_mark_screenshots["all"]["timeOffset"]
     )
 
-    return TranscriptItem(
-        id=raw_transcript_item["id"],
-        phrase_start=raw_transcript_item["timeOffsets"]["speechStart"],
-        phrase_end=raw_transcript_item["timeOffsets"]["prePhraseCallbackStart"],
-        command_start=raw_transcript_item["timeOffsets"]["prePhraseCallbackEnd"],
-        mark_highlight_screenshot_offset_seconds=mark_highlight_screenshot_offset_seconds,
-        pre_phrase_screenshot_offset_seconds=raw_screenshots["preCommand"][
-            "timeOffset"
-        ],
-        command_end=raw_transcript_item["timeOffsets"].get(
-            "postPhraseCallbackStart", None
-        ),
-        # In version 0, we only got commands that completed successfully. In
-        # later versions, we also law commands that didn't complete
-        # successfully. We know the command completed successfully if it has a
-        # `commandCompleted` attribute set
-        is_error=not raw_transcript_item.get("commandCompleted", version == 0),
-        phrase=raw_transcript_item["phrase"],
-        commands=[
-            construct_command(talon_dir, repo_infos, raw_command)
-            for raw_command in raw_transcript_item["commands"]
-        ],
-    )
+    try:
+        return TranscriptItem(
+            id=raw_transcript_item["id"],
+            phrase_start=raw_transcript_item["timeOffsets"]["speechStart"],
+            phrase_end=raw_transcript_item["timeOffsets"]["prePhraseCallbackStart"],
+            command_start=raw_transcript_item["timeOffsets"]["prePhraseCallbackEnd"],
+            mark_highlight_screenshot_offset_seconds=mark_highlight_screenshot_offset_seconds,
+            pre_phrase_screenshot_offset_seconds=raw_screenshots["preCommand"][
+                "timeOffset"
+            ],
+            command_end=raw_transcript_item["timeOffsets"].get(
+                "postPhraseCallbackStart", None
+            ),
+            # In version 0, we only got commands that completed successfully. In
+            # later versions, we also law commands that didn't complete
+            # successfully. We know the command completed successfully if it has a
+            # `commandCompleted` attribute set
+            is_error=not raw_transcript_item.get("commandCompleted", version == 0),
+            phrase=raw_transcript_item["phrase"],
+            commands=[
+                construct_command(talon_dir, repo_infos, raw_command)
+                for raw_command in raw_transcript_item["commands"]
+            ],
+        )
+    except:
+        return None

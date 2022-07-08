@@ -45,7 +45,7 @@
             "module": "voice_vid",
             "args": [
                 "reconcile",
-                "data/raw/react-component-and-fava-beans/index.toml"
+                "../pokey_voice_coding_videos/data/raw/tutorial-part-i/index.toml"
             ]
         },
         {

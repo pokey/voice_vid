@@ -35,15 +35,23 @@ def generate_mark_highlights_timeline(
     media_reference = extract_media_reference(
         config.screen_recording_path, input_timeline
     )
-    framerate = int(input_timeline.metadata["fcp_xml"]["timecode"]["rate"]["timebase"])
 
-    highlight_timings = calculate_mark_highlights_timing(
-        config, reconciled_commands, framerate, input_timeline.duration().to_seconds()
+    source_framerate = int(media_reference.metadata["fcp_xml"]["rate"]["timebase"])
+    timeline_framerate = int(
+        input_timeline.metadata["fcp_xml"]["timecode"]["rate"]["timebase"]
     )
 
-    transition_time = otio.opentime.RationalTime(value=10, rate=framerate)
+    highlight_timings = calculate_mark_highlights_timing(
+        config,
+        reconciled_commands,
+        source_framerate,
+        timeline_framerate,
+        input_timeline.duration().to_seconds(),
+    )
 
-    current_time = otio.opentime.RationalTime(value=0, rate=framerate)
+    transition_time = otio.opentime.RationalTime(value=10, rate=timeline_framerate)
+
+    current_time = otio.opentime.RationalTime(value=0, rate=timeline_framerate)
     items = []
     for highlight_timing in highlight_timings:
         if highlight_timing.target_start_seconds > current_time:

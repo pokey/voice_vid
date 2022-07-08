@@ -20,19 +20,23 @@ class Highlight:
 def calculate_mark_highlights_timing(
     config: Config,
     reconciled_commands: list[CommandTiming],
-    framerate: int,
+    source_framerate: int,
+    timeline_framerate: int,
     timeline_duration: float,
 ):
     talon_log_start = otio.opentime.RationalTime.from_timecode(
-        config.talon_offset, framerate
-    )
+        config.talon_offset, source_framerate
+    ).rescaled_to(timeline_framerate)
 
     return list(
         filter(
             None,
             (
                 get_highlight_timing(
-                    talon_log_start, framerate, timeline_duration, reconciled_command
+                    talon_log_start,
+                    timeline_framerate,
+                    timeline_duration,
+                    reconciled_command,
                 )
                 for reconciled_command in reconciled_commands
             ),

@@ -56,9 +56,9 @@
             "args": [
                 "mark-highlights",
                 "--reconciled",
-                "data/interim/react-component-and-fava-beans/reconciled.jsonl",
-                "data/raw/react-component-and-fava-beans/index.toml",
-                "data/processed/react-component-and-fava-beans/mark-highlights-timeline.xml"
+                "../pokey_voice_coding_videos/data/interim/tutorial-part-i/reconciled.jsonl",
+                "../pokey_voice_coding_videos/data/raw/tutorial-part-i/index.toml",
+                "mark-highlights-timeline.xml"
             ]
         },
     ]

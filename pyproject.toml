@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "voice_vid"
-version = "0.1.0"
+version = "0.1.1"
 description = "Automatically generate transcripts and subtitles for voice coding videos."
 authors = ["Pokey Rule <755842+pokey@users.noreply.github.com>"]
 readme = "README.md"
@@ -11,7 +11,7 @@ voice-vid = "voice_vid.main:app"
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
 typer = { extras = ["all"], version = "^0.4.0" }
-OpenTimelineIO = { git = "git@github.com:pokey/OpenTimelineIO.git", branch = "main", python = ">=3.10,<3.11" }
+OpenTimelineIO = { git = "git@github.com:pokey/OpenTimelineIO.git", branch = "844d50b6ff00556be08c8675b1b5c64e609060d8", python = ">=3.10,<3.11" }
 PySide2 = "^5.15.2"
 toml = "^0.10.2"
 giturlparse = "^0.10.0"

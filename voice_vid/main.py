@@ -6,33 +6,48 @@
 #   > 'path/raw-transcript.jsonl'
 #
 # And then remove anything you don't want
-from pathlib import Path
 import sys
+from pathlib import Path
 
 import opentimelineio as otio
 import typer
-from voice_vid.generate_subtitles import generate_subtitles
-from voice_vid.generate_transcript import generate_transcript
+
+from voice_vid.compute_command_ranges import compute_command_ranges
 from voice_vid.generate_mark_highlights_timeline import (
     generate_mark_highlights_timeline,
 )
-
+from voice_vid.generate_subtitles import generate_subtitles
+from voice_vid.generate_transcript import generate_transcript
+from voice_vid.io import output_transcript, reconciled_commands
 from voice_vid.io.parse_config import parse_config
 from voice_vid.io.parse_transcript import parse_talon_transcript
 from voice_vid.io.sbt import format_transcript
-from voice_vid.io import reconciled_commands
-from voice_vid.io import output_transcript
 from voice_vid.reconcile_commands import reconcile_commands
-from voice_vid.compute_command_ranges import compute_command_ranges
 
 app = typer.Typer()
+
+# Common arguments
+INDEX_PATH_ARGUMENT = typer.Argument(
+    ...,
+    help="The path to an `index.toml` file describing the project configuration",
+)
+RECONCILED_ARGUMENT = typer.Option(
+    ..., help="The output from invoking `voice-vid reconcile`"
+)
 
 
 @app.command()
 def reconcile(
-    index_path: Path, out: typer.FileTextWrite = typer.Argument("-", allow_dash=True)
+    index_path: Path = INDEX_PATH_ARGUMENT,
+    out: typer.FileTextWrite = typer.Argument(
+        "-", allow_dash=True, help="The desired destination for the reconciled file."
+    ),
 ):
-    """Reconciles commands from talon transcript against clips in a video"""
+    """
+    Reconciles commands from talon transcript against clips in a video.  The
+    output of this command is an intermediate file, to be used in the commands
+    that generate subtitles and transcripts.
+    """
     out_resolved = sys.stdout if out == "-" else out
 
     config = parse_config(index_path)
@@ -56,8 +71,8 @@ def reconcile(
 
 @app.command()
 def subtitles(
-    index_path: Path,
-    reconciled: typer.FileText = typer.Option(...),
+    index_path: Path = INDEX_PATH_ARGUMENT,
+    reconciled: typer.FileText = RECONCILED_ARGUMENT,
 ):
     """Generate subtitles for a video"""
     config = parse_config(index_path)
@@ -74,8 +89,8 @@ def subtitles(
 
 @app.command()
 def transcript(
-    index_path: Path,
-    reconciled: typer.FileText = typer.Option(...),
+    index_path: Path = INDEX_PATH_ARGUMENT,
+    reconciled: typer.FileText = RECONCILED_ARGUMENT,
     out: typer.FileTextWrite = typer.Argument("-", allow_dash=True),
 ):
     """Generate subtitles for a video"""
@@ -95,8 +110,8 @@ def transcript(
 
 @app.command()
 def mark_highlights(
-    index_path: Path,
-    reconciled: typer.FileText = typer.Option(...),
+    index_path: Path = INDEX_PATH_ARGUMENT,
+    reconciled: typer.FileText = RECONCILED_ARGUMENT,
     out: typer.FileTextWrite = typer.Argument(...),
 ):
     """Generate a timeline containing a single track with highlights"""

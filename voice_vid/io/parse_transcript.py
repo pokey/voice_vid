@@ -158,14 +158,24 @@ def parse_talon_transcript(path: Path):
 def construct_transcript_item(
     version: int, talon_dir: Path, repo_infos: list[RepoInfo], raw_transcript_item: dict
 ):
-    raw_screenshots = raw_transcript_item["screenshots"]
-    decorated_mark_screenshots = raw_screenshots["decoratedMarks"]
+    raw_screenshots: dict = raw_transcript_item["screenshots"]
 
-    mark_highlight_screenshot_offset_seconds = (
-        None
-        if decorated_mark_screenshots is None
-        else decorated_mark_screenshots["all"]["timeOffset"]
-    )
+    if version >= 2:
+        decorated_mark_screenshots = raw_screenshots.get("decoratedMarks.all")
+
+        mark_highlight_screenshot_offset_seconds = (
+            None
+            if decorated_mark_screenshots is None
+            else decorated_mark_screenshots["timeOffset"]
+        )
+    else:
+        decorated_mark_screenshots = raw_screenshots["decoratedMarks"]
+
+        mark_highlight_screenshot_offset_seconds = (
+            None
+            if decorated_mark_screenshots is None
+            else decorated_mark_screenshots["all"]["timeOffset"]
+        )
 
     try:
         return TranscriptItem(
@@ -181,7 +191,7 @@ def construct_transcript_item(
                 "postPhraseCallbackStart", None
             ),
             # In version 0, we only got commands that completed successfully. In
-            # later versions, we also law commands that didn't complete
+            # later versions, we also log commands that didn't complete
             # successfully. We know the command completed successfully if it has a
             # `commandCompleted` attribute set
             is_error=not raw_transcript_item.get("commandCompleted", version == 0),

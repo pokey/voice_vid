@@ -75,9 +75,9 @@ def get_proposed_command_timing(
             (transcript_item.phrase_start - GRACE_PERIOD_SECONDS)
         ),
         target_start_seconds=shift_and_clamp(transcript_item.phrase_start),
-        target_end_seconds=shift_and_clamp(transcript_item.command_start),
+        target_end_seconds=shift_and_clamp(transcript_item.command_end),
         target_grace_end_seconds=shift_and_clamp(
-            (transcript_item.command_start + GRACE_PERIOD_SECONDS)
+            (transcript_item.command_end + GRACE_PERIOD_SECONDS)
         ),
         shift_seconds=shift_seconds,
         transcript_item=transcript_item,

@@ -70,14 +70,16 @@ def get_proposed_command_timing(
     def shift_and_clamp(raw_seconds: float):
         return max(min(raw_seconds + shift_seconds, timeline_duration), 0)
 
+    target_end_seconds = transcript_item.command_end or transcript_item.command_start
+
     return CommandTiming(
         target_grace_start_seconds=shift_and_clamp(
             (transcript_item.phrase_start - GRACE_PERIOD_SECONDS)
         ),
         target_start_seconds=shift_and_clamp(transcript_item.phrase_start),
-        target_end_seconds=shift_and_clamp(transcript_item.command_end),
+        target_end_seconds=shift_and_clamp(target_end_seconds),
         target_grace_end_seconds=shift_and_clamp(
-            (transcript_item.command_end + GRACE_PERIOD_SECONDS)
+            (target_end_seconds + GRACE_PERIOD_SECONDS)
         ),
         shift_seconds=shift_seconds,
         transcript_item=transcript_item,
